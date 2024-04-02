@@ -12,4 +12,10 @@ public class SceneLoader : MonoBehaviour
         // the sceneName, add in the button in the inspector 
         // what SceneName you want to go to :)
     }
+
+    public void LoadScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+        // sceneIndex is the build number of the scene you want to go to
+    }
 }
