@@ -6,12 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-Buttons
-    path: Assets/Scenes/0Settings.unity
-    guid: a30fc85afd42653489c7c324a251f249
-  - enabled: 1
-    path: Assets/Scenes/1MainScreen.unity
+    path: Assets/Scenes/0MainScreen.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/1Settings.unity
+    guid: a30fc85afd42653489c7c324a251f249
   - enabled: 1
     path: Assets/Scenes/2IntroductionScreen.unity
     guid: 7e585b4e00bf4dc4aafb33bff8149898
@@ -28,15 +27,7 @@ Buttons
     path: Assets/Scenes/6Lost.unity
     guid: e8dd0cde221a2cf4095103f1b1330ed8
   - enabled: 1
-    path: Assets/Scenes/6Saved.unity
+    path: Assets/Scenes/7Saved.unity
     guid: 76e2eaa343dd7644ba2afbd4be652e8f
-  m_configObjects: {}
-
-    path: Assets/Scenes/SampleScene.unity
-    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
-  - enabled: 1
-    path: Assets/Scenes/Scene 2.unity
-    guid: 177860c971a5545b68dcf404697224de
   m_configObjects:
-    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 0e9c60cb3b015440996945f18558c77e, type: 2}
- dev
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: fd4ac474660b13e4c87b20fc217cd703, type: 2}
