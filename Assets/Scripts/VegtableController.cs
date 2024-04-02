@@ -20,4 +20,17 @@ public class VegtableController : MonoBehaviour
             spriteRenderer.sprite = vegtable.deafaultSprite;
         }
     }
+
+    public void Smell()
+    {
+        foreach(Clue clue in vegtable.clues)
+        {
+            if (clue.smellable)
+            {
+                spriteRenderer.sprite = clue.foundSprite;
+            }
+        }
+    }
 }
+
+

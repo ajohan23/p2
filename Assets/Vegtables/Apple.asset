@@ -15,3 +15,9 @@ MonoBehaviour:
   Name: Apple
   Price: 5
   deafaultSprite: {fileID: 21300000, guid: 361b951f85bcd394c8d8a0872d1ce731, type: 3}
+  clues:
+  - foundSprite: {fileID: 21300000, guid: c613a369724ff734f9b79311b9b35b60, type: 3}
+    smellable: 1
+    visible: 0
+    tasteable: 0
+    feelable: 0
