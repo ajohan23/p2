@@ -21,4 +21,13 @@ public class Clue
     public bool visible = false;
     public bool tasteable = false;
     public bool feelable = false;
+
+    public SavingAction action;
+}
+
+[System.Serializable]
+public class SavingAction
+{
+    public string name = "Cut";
+    public Sprite actionSprite;
 }
