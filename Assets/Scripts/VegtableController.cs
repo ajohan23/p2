@@ -31,6 +31,39 @@ public class VegtableController : MonoBehaviour
             }
         }
     }
+
+    public void Taste () 
+    { 
+        foreach (Clue clue in vegtable.clues)
+        {
+            if (clue.tasteable)
+            {
+                spriteRenderer.sprite = clue.foundSprite;
+            }
+        }
+    }
+
+    public void Feel()
+    {
+        foreach (Clue clue in vegtable.clues)
+        {
+            if (clue.feelable)
+            {
+                    spriteRenderer.sprite = clue.foundSprite;
+            }
+        }
+    }
+
+    public void See()
+    {
+        foreach (Clue clue in vegtable.clues)
+        {
+            if (clue.visible)
+            {
+                spriteRenderer.sprite = clue.foundSprite;
+            }
+        }
+    }
 }
 
 
