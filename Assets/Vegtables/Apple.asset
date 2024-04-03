@@ -21,3 +21,6 @@ MonoBehaviour:
     visible: 0
     tasteable: 0
     feelable: 0
+    action:
+      name: Cut
+      actionSprite: {fileID: 21300000, guid: 4bbf57d67a00e7f4a89e62634e8f701e, type: 3}

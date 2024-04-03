@@ -13,17 +13,18 @@ public class ActionButton : MonoBehaviour
     SavingAction action = null; // The action that is performed when this button is pressed. This is set in Inititalize().
 
     //Methods
-    public void Initialize(SavingAction _action, VegtableController vegtableController)
+    public void Initialize(SavingAction _action, VegtableController _vegtableController)
     {
         action = _action;
         buttonText.text = action.name;
+        vegtableController = _vegtableController;
     }
 
     public void PerformAction()
     {
         if (action != null && vegtableController != null)
         {
-
+            vegtableController.PerformSaveAction(action);
         }
     }
 }

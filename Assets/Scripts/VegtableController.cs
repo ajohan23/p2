@@ -5,9 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class VegtableController : MonoBehaviour
 {
-    [SerializeField] Vegtable vegtable;
+    //Refrences
+    [SerializeField] GameObject actionButtonPrefab;
+    [SerializeField] Transform actionbuttonParent;
+
+    //Variables
+    [SerializeField] public Vegtable vegtable;
     SpriteRenderer spriteRenderer;
 
+    //Unity callbacks
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -21,47 +27,74 @@ public class VegtableController : MonoBehaviour
         }
     }
 
-    public void Smell()
+    //Methods
+    public void Smell() //Inspection method used when the player smells the vegtable
     {
         foreach(Clue clue in vegtable.clues)
         {
             if (clue.smellable)
             {
-                spriteRenderer.sprite = clue.foundSprite;
+                ClueFound(clue);
             }
         }
     }
 
-    public void Taste () 
+    public void Taste () //Inspection method used when the player tastes the vegtable
     { 
         foreach (Clue clue in vegtable.clues)
         {
             if (clue.tasteable)
             {
-                spriteRenderer.sprite = clue.foundSprite;
+                ClueFound(clue);
             }
         }
     }
 
-    public void Feel()
+    public void Feel() //Inspection method used when the player touches the vegtable
     {
         foreach (Clue clue in vegtable.clues)
         {
             if (clue.feelable)
             {
-                    spriteRenderer.sprite = clue.foundSprite;
+                ClueFound(clue);
             }
         }
     }
 
-    public void See()
+    public void See() //Inspection method used when the player looks at the vegtable
     {
         foreach (Clue clue in vegtable.clues)
         {
             if (clue.visible)
             {
-                spriteRenderer.sprite = clue.foundSprite;
+                ClueFound(clue);
             }
+        }
+    }
+
+    public void PerformSaveAction(SavingAction action) // Called when an action button is pressed
+    {
+        spriteRenderer.sprite = action.actionSprite;
+    }
+
+    void ClueFound(Clue clue) // Updates the visauls of the vegtable and creates a new action button
+    {
+        spriteRenderer.sprite = clue.foundSprite;
+        CreateActionButton(clue.action);
+    }
+
+    void CreateActionButton(SavingAction action) //Creates and initializes a new action button with the given action
+    {
+        GameObject newButton = Instantiate(actionButtonPrefab, actionbuttonParent);
+
+        ActionButton actionButton = newButton.GetComponent<ActionButton>();
+        if (actionButton != null)
+        {
+            actionButton.Initialize(action, this);
+        }
+        else
+        {
+            Debug.LogWarning("ActionButton script not found on new action button");
         }
     }
 }
