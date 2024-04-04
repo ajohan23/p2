@@ -25,6 +25,7 @@ public class VegtableController : MonoBehaviour
         if (vegtable != null)
         {
             spriteRenderer.sprite = vegtable.deafaultSprite;
+            PlayerPrefs.SetInt("Money Saved", vegtable.Price);
         }
     }
 
@@ -102,13 +103,11 @@ public class VegtableController : MonoBehaviour
 
     public void Keep() 
     {
-        PlayerPrefs.SetInt("Money Saved", vegtable.Price);
         sceneLoader.LoadScene(7);
     }
 
     public void Discard()
     {
-        PlayerPrefs.SetInt("Money Saved", vegtable.Price);
         sceneLoader.LoadScene(6);
     }
 }
