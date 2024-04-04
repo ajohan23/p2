@@ -12,7 +12,7 @@ public class VegtableController : MonoBehaviour
     [SerializeField] TimaerScript timer;
 
     //Variables
-    [SerializeField] public Vegtable vegtable;
+    [SerializeField] Vegtable vegtable;
     SpriteRenderer spriteRenderer;
     public Vegtable[] vegtables;
     List<ActionButton> existingActions = new List<ActionButton>();
@@ -113,6 +113,7 @@ public class VegtableController : MonoBehaviour
             Debug.LogWarning("ActionButton script not found on new action button");
         }
     }
+
     public void Trash()
     {
         Action("Trash");
