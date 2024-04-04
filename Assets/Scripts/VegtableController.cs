@@ -8,9 +8,10 @@ public class VegtableController : MonoBehaviour
     //Refrences
     [SerializeField] GameObject actionButtonPrefab;
     [SerializeField] Transform actionbuttonParent;
+    [SerializeField] SceneLoader sceneLoader;
 
     //Variables
-    [SerializeField] public Vegtable vegtable;
+    [SerializeField] Vegtable vegtable;
     SpriteRenderer spriteRenderer;
 
     //Unity callbacks
@@ -75,6 +76,7 @@ public class VegtableController : MonoBehaviour
     public void PerformSaveAction(SavingAction action) // Called when an action button is pressed
     {
         spriteRenderer.sprite = action.actionSprite;
+        Keep();
     }
 
     void ClueFound(Clue clue) // Updates the visauls of the vegtable and creates a new action button
@@ -96,6 +98,17 @@ public class VegtableController : MonoBehaviour
         {
             Debug.LogWarning("ActionButton script not found on new action button");
         }
+    }
+    public void Keep() 
+    {
+        PlayerPrefs.SetInt("Money Saved", vegtable.Price);
+        sceneLoader.LoadScene(7);
+    }
+
+    public void Discard()
+    {
+        PlayerPrefs.SetInt("Money Saved", vegtable.Price);
+        sceneLoader.LoadScene(6);
     }
 }
 

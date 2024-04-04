@@ -222,7 +222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionButtonPrefab: {fileID: 4881539548485802245, guid: df4ce3e241a03c64884953a8ad9a7174, type: 3}
   actionbuttonParent: {fileID: 558938287}
-  vegtable: {fileID: 11400000, guid: 66018a0520e64c74199a807846865769, type: 2}
+  sceneLoader: {fileID: 2100383206}
+  vegtable: {fileID: 11400000, guid: 5cbaba11033561c42b57c57dc228b597, type: 2}
 --- !u!1 &316936523
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,10 +307,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2100383206}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
+      - m_Target: {fileID: 20456167}
+        m_TargetAssemblyTypeName: VegtableController, Assembly-CSharp
+        m_MethodName: Keep
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
