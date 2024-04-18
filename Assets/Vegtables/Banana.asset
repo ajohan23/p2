@@ -15,3 +15,7 @@ MonoBehaviour:
   Name: Banana
   Price: 3
   deafaultSprite: {fileID: 21300000, guid: 1eb29b0c8c7128e468c3ae4bc4a365d2, type: 3}
+  clues: []
+  correctAction:
+    name: Keep
+    actionSprite: {fileID: 0}

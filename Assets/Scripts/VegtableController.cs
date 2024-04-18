@@ -8,6 +8,7 @@ public class VegtableController : MonoBehaviour
     //Refrences
     [SerializeField] GameObject actionButtonPrefab;
     [SerializeField] Transform actionbuttonParent;
+    [SerializeField] HighScore highScore;
 
     //Variables
     [SerializeField] public Vegtable vegtable;
@@ -75,6 +76,7 @@ public class VegtableController : MonoBehaviour
     public void PerformSaveAction(SavingAction action) // Called when an action button is pressed
     {
         spriteRenderer.sprite = action.actionSprite;
+        Action(action.name);
     }
 
     void ClueFound(Clue clue) // Updates the visauls of the vegtable and creates a new action button
@@ -95,6 +97,26 @@ public class VegtableController : MonoBehaviour
         else
         {
             Debug.LogWarning("ActionButton script not found on new action button");
+        }
+    }
+    public void Trash()
+    {
+        Action("Trash");
+    }
+
+    public void Keep()
+    {
+        Action("Keep");
+    }
+    void Action(string Action)
+    {
+        if (Action == vegtable.correctAction.name)
+        {
+            highScore.AddScore(vegtable.Price);
+        }
+        else
+        {
+            highScore.ReduceScore(vegtable.Price);
         }
     }
 }
