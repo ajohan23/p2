@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Melon
   Price: 20
-  deafaultSprite: {fileID: 21300000, guid: 2c52760318f854147a9f59b5a39f8628, type: 3}
+  deafaultSprite: {fileID: 21300000, guid: c40cde14452aad547bd2da6d78d126a9, type: 3}
   clues:
-  - foundSprite: {fileID: 21300000, guid: d68bccd740690d14492ad52ebe5c8a02, type: 3}
+  - foundSprite: {fileID: 21300000, guid: 581bd5b7fcea64b45acdc6616fa71e27, type: 3}
     smellable: 1
     visible: 1
     tasteable: 0
     feelable: 1
     action:
       name: Cut
-      actionSprite: {fileID: 21300000, guid: 203e100a045ace141a071872bbf97e62, type: 3}
+      actionSprite: {fileID: 21300000, guid: ab459c3347c77d34babf23b685b9e8e5, type: 3}
   correctAction: Cut

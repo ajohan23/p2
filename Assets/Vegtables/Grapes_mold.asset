@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Grapes
   Price: 20
-  deafaultSprite: {fileID: 21300000, guid: eb092e8e727e7ee42a9cd52e8b6f5b3a, type: 3}
+  deafaultSprite: {fileID: 21300000, guid: d4833618646c4014786c435ceac24ee6, type: 3}
   clues:
-  - foundSprite: {fileID: 21300000, guid: 16c482d53dd354d4eb6fa907c3e8fdcc, type: 3}
+  - foundSprite: {fileID: 21300000, guid: bb6af2ed15c70ce49b545d141d54b25c, type: 3}
     smellable: 0
     visible: 1
     tasteable: 1
     feelable: 1
     action:
       name: Cut
-      actionSprite: {fileID: 21300000, guid: aa58d49197cc4d842a836e872dd83bd1, type: 3}
+      actionSprite: {fileID: 21300000, guid: 235ab78ab99c04d4ca1cdc5f48597a26, type: 3}
   correctAction: Cut

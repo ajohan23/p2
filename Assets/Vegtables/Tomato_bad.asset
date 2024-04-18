@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Tomato
   Price: 1
-  deafaultSprite: {fileID: 21300000, guid: 9fe13115b1e1dae43a6a5331a2cc2026, type: 3}
+  deafaultSprite: {fileID: 21300000, guid: 874e6382e793d1d45826bbf40f185b97, type: 3}
   clues:
-  - foundSprite: {fileID: 21300000, guid: 85be0b5fecd08704b8e87bc4eabcc2a6, type: 3}
+  - foundSprite: {fileID: 21300000, guid: 5cac7d76245fba44dbd0959bdd57bdbd, type: 3}
     smellable: 0
     visible: 1
     tasteable: 0
     feelable: 1
     action:
       name: Cut
-      actionSprite: {fileID: 21300000, guid: ebba1b7fd341a794b95d6147f74ed360, type: 3}
+      actionSprite: {fileID: 21300000, guid: 58cc59e87cb93ef49afd2043177dca55, type: 3}
   correctAction: Trash

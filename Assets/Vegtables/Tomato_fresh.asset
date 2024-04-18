@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Tomato
   Price: 2
-  deafaultSprite: {fileID: 21300000, guid: 9fe13115b1e1dae43a6a5331a2cc2026, type: 3}
+  deafaultSprite: {fileID: 21300000, guid: 874e6382e793d1d45826bbf40f185b97, type: 3}
   clues: []
   correctAction: Keep

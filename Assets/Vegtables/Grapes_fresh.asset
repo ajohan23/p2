@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Grapes
   Price: 20
-  deafaultSprite: {fileID: 21300000, guid: eb092e8e727e7ee42a9cd52e8b6f5b3a, type: 3}
+  deafaultSprite: {fileID: 21300000, guid: d4833618646c4014786c435ceac24ee6, type: 3}
   clues: []
   correctAction: Keep

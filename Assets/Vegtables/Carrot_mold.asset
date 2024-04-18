@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Carrot
   Price: 1
-  deafaultSprite: {fileID: 21300000, guid: 29059436c2a500d458d9a7ceb0d7038e, type: 3}
+  deafaultSprite: {fileID: 21300000, guid: 7754557466e6c534188758ba30e7ee6a, type: 3}
   clues:
-  - foundSprite: {fileID: 21300000, guid: 171efba9540b7c74c865b026436ec9f1, type: 3}
+  - foundSprite: {fileID: 21300000, guid: e4f5a35ee1f399f45b280d520e5ab8bd, type: 3}
     smellable: 0
     visible: 1
     tasteable: 0
     feelable: 1
     action:
       name: Cut
-      actionSprite: {fileID: 21300000, guid: cd3ba0c9c17435747b802dd373f0cd5f, type: 3}
+      actionSprite: {fileID: 21300000, guid: 31bfd6a3c15ee1c489c8f63d99d9fd4d, type: 3}
   correctAction: Trash
