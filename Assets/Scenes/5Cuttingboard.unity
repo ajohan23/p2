@@ -224,6 +224,10 @@ MonoBehaviour:
   actionbuttonParent: {fileID: 558938287}
   highScore: {fileID: 485395241}
   vegtable: {fileID: 11400000, guid: 66018a0520e64c74199a807846865769, type: 2}
+  vegtables:
+  - {fileID: 11400000, guid: 0ea05600078dbfc47957fb935265cd65, type: 2}
+  - {fileID: 11400000, guid: 5f7eb095d338a394fb63deaa51042a5a, type: 2}
+  - {fileID: 11400000, guid: 2af489f3b2564fa44b6adfa480644570, type: 2}
 --- !u!1 &316936523
 GameObject:
   m_ObjectHideFlags: 0

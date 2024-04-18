@@ -13,6 +13,7 @@ public class VegtableController : MonoBehaviour
     //Variables
     [SerializeField] public Vegtable vegtable;
     SpriteRenderer spriteRenderer;
+    public Vegtable[] vegtables;
 
     //Unity callbacks
     private void Awake()
@@ -22,10 +23,7 @@ public class VegtableController : MonoBehaviour
 
     private void Start()
     {
-        if (vegtable != null)
-        {
-            spriteRenderer.sprite = vegtable.deafaultSprite;
-        }
+        Invoke("ChooseRandomVegtable", 1.0f);
     }
 
     //Methods
@@ -110,7 +108,7 @@ public class VegtableController : MonoBehaviour
     }
     void Action(string Action)
     {
-        if (Action == vegtable.correctAction.name)
+        if (Action == vegtable.correctAction)
         {
             highScore.AddScore(vegtable.Price);
         }
@@ -118,6 +116,15 @@ public class VegtableController : MonoBehaviour
         {
             highScore.ReduceScore(vegtable.Price);
         }
+
+        Invoke("ChooseRandomVegtable", 1.0f);
+    }
+
+    void ChooseRandomVegtable()
+    {
+        vegtable = vegtables[Random.Range(0, vegtables.Length)];
+        spriteRenderer.sprite = vegtable.deafaultSprite;
+
     }
 }
 

@@ -16,3 +16,4 @@ MonoBehaviour:
   Price: 5
   deafaultSprite: {fileID: 21300000, guid: 63b060efda7a25d47b522f1f0be7a76e, type: 3}
   clues: []
+  correctAction: Keep

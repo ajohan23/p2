@@ -14,5 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pepper
   Price: 5
-  deafaultSprite: {fileID: 21300000, guid: a9c1954a740a30a4ea4c6bd190940ccd, type: 3}
-  clues: []
+  deafaultSprite: {fileID: 21300000, guid: 63b060efda7a25d47b522f1f0be7a76e, type: 3}
+  clues:
+  - foundSprite: {fileID: 21300000, guid: a9c1954a740a30a4ea4c6bd190940ccd, type: 3}
+    smellable: 0
+    visible: 1
+    tasteable: 0
+    feelable: 1
+    action:
+      name: Cut
+      actionSprite: {fileID: 21300000, guid: 190a7bfb1caa46e41bcbbecb343119ab, type: 3}
+  correctAction: Cut
