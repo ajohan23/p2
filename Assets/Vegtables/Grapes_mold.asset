@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37342e23ff78e4439e481f12ccc4d0d, type: 3}
+  m_Name: Grapes_mold
+  m_EditorClassIdentifier: 
+  Name: Grapes
+  Price: 20
+  deafaultSprite: {fileID: 21300000, guid: eb092e8e727e7ee42a9cd52e8b6f5b3a, type: 3}
+  clues:
+  - foundSprite: {fileID: 21300000, guid: 16c482d53dd354d4eb6fa907c3e8fdcc, type: 3}
+    smellable: 0
+    visible: 1
+    tasteable: 1
+    feelable: 1
+    action:
+      name: Cut
+      actionSprite: {fileID: 21300000, guid: aa58d49197cc4d842a836e872dd83bd1, type: 3}
+  correctAction: Cut

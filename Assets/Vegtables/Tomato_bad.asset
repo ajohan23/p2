@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37342e23ff78e4439e481f12ccc4d0d, type: 3}
+  m_Name: Tomato_bad
+  m_EditorClassIdentifier: 
+  Name: Tomato
+  Price: 1
+  deafaultSprite: {fileID: 21300000, guid: 9fe13115b1e1dae43a6a5331a2cc2026, type: 3}
+  clues:
+  - foundSprite: {fileID: 21300000, guid: 85be0b5fecd08704b8e87bc4eabcc2a6, type: 3}
+    smellable: 0
+    visible: 1
+    tasteable: 0
+    feelable: 1
+    action:
+      name: Cut
+      actionSprite: {fileID: 21300000, guid: ebba1b7fd341a794b95d6147f74ed360, type: 3}
+  correctAction: Trash
