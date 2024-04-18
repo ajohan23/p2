@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class TimaerScript : MonoBehaviour
 {
@@ -38,5 +40,19 @@ public class TimaerScript : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+
+        if (TimeLeft < 0)
+        {
+            SceneManager.LoadScene(6);
+        }
+        
+    }
+    public void Pause()
+    {
+        TimeOn = false;
+    }
+    public void UnPause()
+    {
+        TimeOn = true;
     }
 }

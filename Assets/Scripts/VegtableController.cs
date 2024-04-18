@@ -9,6 +9,7 @@ public class VegtableController : MonoBehaviour
     [SerializeField] GameObject actionButtonPrefab;
     [SerializeField] Transform actionbuttonParent;
     [SerializeField] HighScore highScore;
+    [SerializeField] TimaerScript timer;
 
     //Variables
     [SerializeField] public Vegtable vegtable;
@@ -117,6 +118,7 @@ public class VegtableController : MonoBehaviour
             highScore.ReduceScore(vegtable.Price);
         }
 
+        timer.Pause();
         Invoke("ChooseRandomVegtable", 1.0f);
     }
 
@@ -124,6 +126,8 @@ public class VegtableController : MonoBehaviour
     {
         vegtable = vegtables[Random.Range(0, vegtables.Length)];
         spriteRenderer.sprite = vegtable.deafaultSprite;
+
+        timer.UnPause();
 
     }
 }
