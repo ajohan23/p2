@@ -82,7 +82,7 @@ public class VegtableController : MonoBehaviour
 
     void ClueFound(Clue clue) // Updates the visauls of the vegtable and creates a new action button
     {
-        if (isOpenForInput) //Cancel if we dont accept input
+        if (!isOpenForInput) //Cancel if we dont accept input
         {
             return;
         }
