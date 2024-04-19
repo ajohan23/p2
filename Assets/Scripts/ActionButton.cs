@@ -27,4 +27,9 @@ public class ActionButton : MonoBehaviour
             vegtableController.PerformSaveAction(action);
         }
     }
+
+    public SavingAction GetAction()
+    {
+        return action;
+    }
 }
