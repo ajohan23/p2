@@ -5,13 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Vegtable", menuName = "Vegtable")]
 public class Vegtable : ScriptableObject
 {
-    public Answer CorrectAnswer = Answer.keep;
     public string Name = "Name Vegtable";
     public int Price = 0;
     public Sprite deafaultSprite;
     public Clue[] clues;
     public string correctAction;
-
+    
 }
 
 [System.Serializable]
@@ -31,11 +30,4 @@ public class SavingAction
 {
     public string name = "Cut";
     public Sprite actionSprite;
-}
-
-public enum Answer 
-{ 
-    keep,
-    trash,
-    action
 }
