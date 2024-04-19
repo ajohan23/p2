@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Potato
   Price: 1
-  deafaultSprite: {fileID: 21300000, guid: 030cadbdb3f8445448a0412137feda44, type: 3}
+  deafaultSprite: {fileID: 21300000, guid: a51b62d78cab4644fa01a72235ce3b85, type: 3}
   clues:
-  - foundSprite: {fileID: 21300000, guid: eae04c4909960a04e88a6bf33956ef19, type: 3}
+  - foundSprite: {fileID: 21300000, guid: 49dcaac65c5806f498c7dba8014f936c, type: 3}
     smellable: 1
     visible: 1
     tasteable: 1
     feelable: 1
     action:
       name: Cut
-      actionSprite: {fileID: 21300000, guid: 53b1fec2fe8dbcf40abc03325f2ea77d, type: 3}
+      actionSprite: {fileID: 21300000, guid: 8c347b454584cad43a262f15ccd6f6f5, type: 3}
   correctAction: Trash

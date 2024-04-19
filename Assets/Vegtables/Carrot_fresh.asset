@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Carrot
   Price: 1
-  deafaultSprite: {fileID: 21300000, guid: 7754557466e6c534188758ba30e7ee6a, type: 3}
+  deafaultSprite: {fileID: 21300000, guid: 45684acd115608e4fad03766b86bf38f, type: 3}
   clues: []
   correctAction: Keep

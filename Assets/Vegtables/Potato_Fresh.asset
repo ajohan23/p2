@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Potato
   Price: 1
-  deafaultSprite: {fileID: 21300000, guid: 030cadbdb3f8445448a0412137feda44, type: 3}
+  deafaultSprite: {fileID: 21300000, guid: a51b62d78cab4644fa01a72235ce3b85, type: 3}
   clues: []
   correctAction: Keep
