@@ -10,7 +10,9 @@ public class Vegtable : ScriptableObject
     public Sprite deafaultSprite;
     public Clue[] clues;
     public string correctAction;
-    
+
+    public string keepComment = "";
+    public string trashComment = "";
 }
 
 [System.Serializable]
@@ -22,6 +24,11 @@ public class Clue
     public bool tasteable = false;
     public bool feelable = false;
 
+    public string smellComment = "MISSING COMMENT!";
+    public string seeComment = "MISSING COMMENT!";
+    public string tasteComment = "MISSING COMMENT!";
+    public string feelComment = "MISSING COMMENT!";
+
     public SavingAction action;
 }
 
@@ -30,4 +37,5 @@ public class SavingAction
 {
     public string name = "Cut";
     public Sprite actionSprite;
+    public string actionComment;
 }

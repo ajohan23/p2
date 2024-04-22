@@ -58,7 +58,7 @@ public class DialogManager : MonoBehaviour
             yield return new WaitForSeconds(0.03f);
         }
     }
-    void EndDialogue()
+    public void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
 

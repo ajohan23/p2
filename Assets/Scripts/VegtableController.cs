@@ -10,6 +10,7 @@ public class VegtableController : MonoBehaviour
     [SerializeField] Transform actionbuttonParent;
     [SerializeField] HighScore highScore;
     [SerializeField] TimaerScript timer;
+    [SerializeField] DialogManager dialogManager;
 
     //Variables
     [SerializeField] Vegtable vegtable;
@@ -17,6 +18,7 @@ public class VegtableController : MonoBehaviour
     public Vegtable[] vegtables;
     List<ActionButton> existingActions = new List<ActionButton>();
     bool isOpenForInput = true; //Makes sure that the player cant press actions when they are not supossed to
+    [SerializeField] string CommentorName = "Owl"; //The name displayed when a comment is posted
 
     //Unity callbacks
     private void Awake()
@@ -26,7 +28,7 @@ public class VegtableController : MonoBehaviour
 
     private void Start()
     {
-        Invoke("ChooseRandomVegtable", 1.0f);
+        ChooseRandomVegtable();
     }
 
     //Methods
@@ -36,7 +38,7 @@ public class VegtableController : MonoBehaviour
         {
             if (clue.smellable)
             {
-                ClueFound(clue);
+                ClueFound(clue, "smell");
             }
         }
     }
@@ -47,7 +49,7 @@ public class VegtableController : MonoBehaviour
         {
             if (clue.tasteable)
             {
-                ClueFound(clue);
+                ClueFound(clue, "taste");
             }
         }
     }
@@ -58,7 +60,7 @@ public class VegtableController : MonoBehaviour
         {
             if (clue.feelable)
             {
-                ClueFound(clue);
+                ClueFound(clue, "feel");
             }
         }
     }
@@ -69,7 +71,7 @@ public class VegtableController : MonoBehaviour
         {
             if (clue.visible)
             {
-                ClueFound(clue);
+                ClueFound(clue, "see");
             }
         }
     }
@@ -77,15 +79,38 @@ public class VegtableController : MonoBehaviour
     public void PerformSaveAction(SavingAction action) // Called when an action button is pressed
     {
         spriteRenderer.sprite = action.actionSprite;
+        dialogManager.StartDialogue(new Dialogue(CommentorName, action.actionComment));
         Action(action.name);
     }
 
-    void ClueFound(Clue clue) // Updates the visauls of the vegtable and creates a new action button
+    void ClueFound(Clue clue, string sense) // Updates the visauls of the vegtable and creates a new action button
     {
         if (!isOpenForInput) //Cancel if we dont accept input
         {
             return;
         }
+
+        switch(sense)
+        {
+            case "see":
+                dialogManager.StartDialogue(new Dialogue(CommentorName, clue.seeComment));
+                break;
+            case "smell":
+                dialogManager.StartDialogue(new Dialogue(CommentorName, clue.smellComment));
+                break;
+            case "feel":
+                dialogManager.StartDialogue(new Dialogue(CommentorName, clue.feelComment));
+                break;
+            case "taste":
+                dialogManager.StartDialogue(new Dialogue(CommentorName, clue.tasteComment));
+                break;
+            default:
+                break;
+
+        }
+
+        pauseInput(1f);
+        Invoke("HideComment", 1f);
         spriteRenderer.sprite = clue.foundSprite;
         CreateActionButton(clue.action);
     }
@@ -116,11 +141,13 @@ public class VegtableController : MonoBehaviour
 
     public void Trash()
     {
+        dialogManager.StartDialogue(new Dialogue(CommentorName, vegtable.trashComment));
         Action("Trash");
     }
 
     public void Keep()
     {
+        dialogManager.StartDialogue(new Dialogue(CommentorName, vegtable.keepComment));
         Action("Keep");
     }
     void Action(string Action)
@@ -141,18 +168,15 @@ public class VegtableController : MonoBehaviour
 
         timer.Pause();
         ClearActionButtons();
-        isOpenForInput = false;
+        pauseInput(1f);
         Invoke("ChooseRandomVegtable", 1.0f);
     }
 
     void ChooseRandomVegtable()
     {
-        isOpenForInput = true;
+        HideComment();
         vegtable = vegtables[Random.Range(0, vegtables.Length)];
         spriteRenderer.sprite = vegtable.deafaultSprite;
-
-        timer.UnPause();
-
     }
 
     void ClearActionButtons()
@@ -162,6 +186,22 @@ public class VegtableController : MonoBehaviour
             Destroy(actionButton.gameObject);
         }
         existingActions.Clear();
+    }
+
+    void HideComment()
+    {
+        dialogManager.EndDialogue();
+    }
+
+    void pauseInput(float time)
+    {
+        isOpenForInput = false;
+        Invoke("enableInput", time);
+    }
+
+    void enableInput()
+    {
+        isOpenForInput = true;
     }
 }
 

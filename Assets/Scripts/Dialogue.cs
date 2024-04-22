@@ -9,4 +9,16 @@ public class Dialogue
 
     [TextArea(3,10)]
     public string[] sentences;
+
+    public Dialogue(string _name, string[] _sentences) 
+    {
+        name = _name;
+        sentences = _sentences;
+    }
+
+    public Dialogue(string _name, string _sentence) 
+    {
+        name= _name;
+        sentences = new string[1] {_sentence};
+    }
 }
