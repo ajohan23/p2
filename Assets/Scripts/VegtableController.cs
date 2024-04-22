@@ -11,7 +11,7 @@ public class VegtableController : MonoBehaviour
     [SerializeField] HighScore highScore;
     [SerializeField] TimaerScript timer;
 
-    [SerializeField] ParticleSystem part;
+    [SerializeField] ParticleSystem part; // staaaaars!
 
     //Variables
     [SerializeField] Vegtable vegtable;
@@ -135,7 +135,7 @@ public class VegtableController : MonoBehaviour
         if (Action == vegtable.correctAction)
         {
             highScore.AddScore(vegtable.Price);
-            part.Play();
+            part.Play(); // if you want to change some of the stars settings, go to unity's inspector
         }
         else
         {
