@@ -11,6 +11,8 @@ public class VegtableController : MonoBehaviour
     [SerializeField] HighScore highScore;
     [SerializeField] TimaerScript timer;
 
+    [SerializeField] ParticleSystem part;
+
     //Variables
     [SerializeField] Vegtable vegtable;
     SpriteRenderer spriteRenderer;
@@ -133,6 +135,7 @@ public class VegtableController : MonoBehaviour
         if (Action == vegtable.correctAction)
         {
             highScore.AddScore(vegtable.Price);
+            part.Play();
         }
         else
         {
