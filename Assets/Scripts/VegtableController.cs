@@ -8,11 +8,15 @@ public class VegtableController : MonoBehaviour
     //Refrences
     [SerializeField] GameObject actionButtonPrefab;
     [SerializeField] Transform actionbuttonParent;
-    [SerializeField] SceneLoader sceneLoader;
+    [SerializeField] HighScore highScore;
+    [SerializeField] TimaerScript timer;
 
     //Variables
     [SerializeField] Vegtable vegtable;
     SpriteRenderer spriteRenderer;
+    public Vegtable[] vegtables;
+    List<ActionButton> existingActions = new List<ActionButton>();
+    bool isOpenForInput = true; //Makes sure that the player cant press actions when they are not supossed to
 
     //Unity callbacks
     private void Awake()
@@ -22,10 +26,7 @@ public class VegtableController : MonoBehaviour
 
     private void Start()
     {
-        if (vegtable != null)
-        {
-            spriteRenderer.sprite = vegtable.deafaultSprite;
-        }
+        Invoke("ChooseRandomVegtable", 1.0f);
     }
 
     //Methods
@@ -76,39 +77,91 @@ public class VegtableController : MonoBehaviour
     public void PerformSaveAction(SavingAction action) // Called when an action button is pressed
     {
         spriteRenderer.sprite = action.actionSprite;
-        Keep();
+        Action(action.name);
     }
 
     void ClueFound(Clue clue) // Updates the visauls of the vegtable and creates a new action button
     {
+        if (!isOpenForInput) //Cancel if we dont accept input
+        {
+            return;
+        }
         spriteRenderer.sprite = clue.foundSprite;
         CreateActionButton(clue.action);
     }
 
     void CreateActionButton(SavingAction action) //Creates and initializes a new action button with the given action
     {
+        foreach(ActionButton _existingAction in existingActions) //If a button already exists for the given action. Cancel
+        {
+            if (_existingAction.GetAction().name == action.name)
+            {
+                return;
+            }
+        }
+
         GameObject newButton = Instantiate(actionButtonPrefab, actionbuttonParent);
 
         ActionButton actionButton = newButton.GetComponent<ActionButton>();
         if (actionButton != null)
         {
             actionButton.Initialize(action, this);
+            existingActions.Add(actionButton);
         }
         else
         {
             Debug.LogWarning("ActionButton script not found on new action button");
         }
     }
-    public void Keep() 
+
+    public void Trash()
     {
-        PlayerPrefs.SetInt("Money Saved", vegtable.Price);
-        sceneLoader.LoadScene(7);
+        Action("Trash");
     }
 
-    public void Discard()
+    public void Keep()
     {
-        PlayerPrefs.SetInt("Money Saved", vegtable.Price);
-        sceneLoader.LoadScene(6);
+        Action("Keep");
+    }
+    void Action(string Action)
+    {
+        if(!isOpenForInput) //Cancel if we dont accept input
+        {
+            return;
+        }
+
+        if (Action == vegtable.correctAction)
+        {
+            highScore.AddScore(vegtable.Price);
+        }
+        else
+        {
+            highScore.ReduceScore(vegtable.Price);
+        }
+
+        timer.Pause();
+        ClearActionButtons();
+        isOpenForInput = false;
+        Invoke("ChooseRandomVegtable", 1.0f);
+    }
+
+    void ChooseRandomVegtable()
+    {
+        isOpenForInput = true;
+        vegtable = vegtables[Random.Range(0, vegtables.Length)];
+        spriteRenderer.sprite = vegtable.deafaultSprite;
+
+        timer.UnPause();
+
+    }
+
+    void ClearActionButtons()
+    {
+        foreach(ActionButton actionButton in existingActions)
+        {
+            Destroy(actionButton.gameObject);
+        }
+        existingActions.Clear();
     }
 }
 

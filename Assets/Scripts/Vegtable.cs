@@ -10,7 +10,7 @@ public class Vegtable : ScriptableObject
     public int Price = 0;
     public Sprite deafaultSprite;
     public Clue[] clues;
-
+    public string correctAction;
 
 }
 
