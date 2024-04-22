@@ -29,9 +29,8 @@ public class VegtableController : MonoBehaviour
 
     private void Start()
     {
-        Invoke("ChooseRandomVegtable", 1.0f);
+        Invoke("ChooseRandomVegtable", 0.5f);
         Tween();
-
     }
 
     //Methods
@@ -148,7 +147,8 @@ public class VegtableController : MonoBehaviour
         timer.Pause();
         ClearActionButtons();
         isOpenForInput = false;
-        Invoke("ChooseRandomVegtable", 1.0f);
+        Tween();
+        Invoke("ChooseRandomVegtable", 0.5f);
     }
 
     void ChooseRandomVegtable()
@@ -170,7 +170,7 @@ public class VegtableController : MonoBehaviour
         existingActions.Clear();
     }
 
-     private void Tween() // for the tween
+    public void Tween() // for the tween
     {
         LeanTween.cancel(gameObject);
 
