@@ -31,6 +31,7 @@ public class VegtableController : MonoBehaviour
 
     private void Start()
     {
+
         ChooseRandomVegtable();
         Invoke("ChooseRandomVegtable", 1.0f);
         Tween();
@@ -175,7 +176,9 @@ public class VegtableController : MonoBehaviour
         timer.Pause();
         ClearActionButtons();
         pauseInput(1f);
-        Invoke("ChooseRandomVegtable", 1.0f);
+        isOpenForInput = false;
+        Tween();
+        Invoke("ChooseRandomVegtable", 0.5f);
     }
 
     void ChooseRandomVegtable()
@@ -199,7 +202,6 @@ public class VegtableController : MonoBehaviour
     {
         dialogManager.EndDialogue();
     }
-
     void pauseInput(float time)
     {
         isOpenForInput = false;
@@ -211,7 +213,8 @@ public class VegtableController : MonoBehaviour
         isOpenForInput = true;
     }
 
-    private void Tween() // for the tween
+
+    public void Tween() // for the tween
     {
         LeanTween.cancel(gameObject);
 
