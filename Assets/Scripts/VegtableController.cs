@@ -12,6 +12,7 @@ public class VegtableController : MonoBehaviour
     [SerializeField] TimaerScript timer;
 
     [SerializeField] ParticleSystem part; // staaaaars!
+    [SerializeField] float tweenTime; // tween
 
     //Variables
     [SerializeField] Vegtable vegtable;
@@ -29,6 +30,8 @@ public class VegtableController : MonoBehaviour
     private void Start()
     {
         Invoke("ChooseRandomVegtable", 1.0f);
+        Tween();
+
     }
 
     //Methods
@@ -165,6 +168,14 @@ public class VegtableController : MonoBehaviour
             Destroy(actionButton.gameObject);
         }
         existingActions.Clear();
+    }
+
+     private void Tween() // for the tween
+    {
+        LeanTween.cancel(gameObject);
+
+        LeanTween.scale(gameObject, Vector3.one*2, tweenTime)
+        .setEasePunch();
     }
 }
 
