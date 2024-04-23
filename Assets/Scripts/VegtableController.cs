@@ -166,6 +166,7 @@ public class VegtableController : MonoBehaviour
         {
             highScore.AddScore(vegtable.Price);
             tweenImage();
+            part.Play();
             
         }
         else
