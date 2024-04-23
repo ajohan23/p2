@@ -8,10 +8,12 @@ public class HighScore : MonoBehaviour
 {
     private int currentScore = 0;
     public TextMeshProUGUI highScoreText;
+    public TextMeshProUGUI savedHighScore;
     // Method to add a certain amount to the score when answered correctly
     public void AddScore(int amount)
     {
         currentScore += amount;
+        PlayerPrefs.SetInt("LastScore", currentScore);
         UpdateText();
     }
 
@@ -21,6 +23,7 @@ public class HighScore : MonoBehaviour
         currentScore -= amount;
         // Ensure the score doesn't go below zero
         currentScore = Mathf.Max(0, currentScore);
+        PlayerPrefs.SetInt("LastScore", currentScore);
         UpdateText();
     }
 
