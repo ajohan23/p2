@@ -14,7 +14,7 @@ public class VegtableController : MonoBehaviour
 
     [SerializeField] ParticleSystem part; // staaaaars!
     public float tweenTime; // tween
-    [SerializeField] GameObject imageGameObject;
+    public GameObject imageGameObject;
 
     //Variables
     [SerializeField] Vegtable vegtable;
@@ -165,7 +165,8 @@ public class VegtableController : MonoBehaviour
         if (Action == vegtable.correctAction)
         {
             highScore.AddScore(vegtable.Price);
-            TweenImage();
+            tweenImage();
+            
         }
         else
         {
@@ -212,9 +213,10 @@ public class VegtableController : MonoBehaviour
         isOpenForInput = true;
     }
 
-    public class TweenImage()
+    public void tweenImage()
     {
-        LeanTween.scale(gameObject, Vector3.one*2, tweenTime).setEasePunch();
+        LeanTween.scale(gameObject, Vector3.one*2, tweenTime)
+        .setEasePunch();
     }
 
     IEnumerator showX() // Kører samtidigt med en Void Update
