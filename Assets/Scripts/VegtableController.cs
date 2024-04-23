@@ -12,6 +12,10 @@ public class VegtableController : MonoBehaviour
     [SerializeField] TimaerScript timer;
     [SerializeField] DialogManager dialogManager;
 
+    [SerializeField] ParticleSystem part; // staaaaars!
+    public float tweenTime; // tween
+    [SerializeField] GameObject imageGameObject;
+
     //Variables
     [SerializeField] Vegtable vegtable;
     SpriteRenderer spriteRenderer;
@@ -24,6 +28,7 @@ public class VegtableController : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        imageGameObject.SetActive(false);
     }
 
     private void Start()
@@ -160,10 +165,12 @@ public class VegtableController : MonoBehaviour
         if (Action == vegtable.correctAction)
         {
             highScore.AddScore(vegtable.Price);
+            TweenImage();
         }
         else
         {
             highScore.ReduceScore(vegtable.Price);
+            StartCoroutine(showX()); // used together with an IEnumerator,
         }
 
         timer.Pause();
@@ -203,6 +210,18 @@ public class VegtableController : MonoBehaviour
     void enableInput()
     {
         isOpenForInput = true;
+    }
+
+    public class TweenImage()
+    {
+        LeanTween.scale(gameObject, Vector3.one*2, tweenTime).setEasePunch();
+    }
+
+    IEnumerator showX() // Kører samtidigt med en Void Update
+    {
+        imageGameObject.SetActive (true); // shows the image because it is true
+        yield return new WaitForSeconds(0.55f); // has a tiny pause, return type yield
+        imageGameObject.SetActive(false); // then the image is false again
     }
 }
 
