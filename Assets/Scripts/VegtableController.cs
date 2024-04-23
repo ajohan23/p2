@@ -174,6 +174,7 @@ public class VegtableController : MonoBehaviour
 
     void ChooseRandomVegtable()
     {
+        timer.UnPause();
         HideComment();
         vegtable = vegtables[Random.Range(0, vegtables.Length)];
         spriteRenderer.sprite = vegtable.deafaultSprite;
