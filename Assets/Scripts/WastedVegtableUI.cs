@@ -5,18 +5,19 @@ using TMPro;
 
 public class WastedVegtableUI : MonoBehaviour
 {
-    public TMP_Text textTotal;
-    public TMP_Text textSaved;
+    public TMP_Text textLastScore;
+    public TMP_Text textHighscore;
 
     // Start is called before the first frame update
     void Start()
     {
-        textSaved.text = $"You Wasted {PlayerPrefs.GetInt("Money Saved")}kr";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        int lastScore = PlayerPrefs.GetInt("LastScore", 0);
+        int highScore = PlayerPrefs.GetInt("SavedHighScore", 0);
+        if (lastScore > highScore)
+        {
+            PlayerPrefs.SetInt("SavedHighScore", lastScore);
+        }
+        textLastScore.text = $"You Wasted {PlayerPrefs.GetInt("LastScore")}kr";
+        textHighscore.text = $"Highest amount saved: {PlayerPrefs.GetInt("SavedHighScore")}kr";
     }
 }
