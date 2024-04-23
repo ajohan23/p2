@@ -35,7 +35,6 @@ public class VegtableController : MonoBehaviour
 
     private void Start()
     {
-
         ChooseRandomVegtable();
         Invoke("ChooseRandomVegtable", 1.0f);
         Tween();
@@ -218,7 +217,7 @@ public class VegtableController : MonoBehaviour
     {
         isOpenForInput = true;
     }
-
+    
 
     public void Tween() // for the tween
     {
@@ -237,9 +236,6 @@ public class VegtableController : MonoBehaviour
 
         imageGameObject.SetActive(false); // then the image is false again
     }
-
-
-    
 }
 
 
