@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -15,6 +16,8 @@ public class VegtableController : MonoBehaviour
     [SerializeField] ParticleSystem part; // staaaaars!
     [SerializeField] float tweenTime; // tween
 
+    [SerializeField] GameObject imageGameObject;
+
     //Variables
     [SerializeField] Vegtable vegtable;
     SpriteRenderer spriteRenderer;
@@ -27,6 +30,7 @@ public class VegtableController : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        imageGameObject.SetActive(false);
     }
 
     private void Start()
@@ -171,6 +175,8 @@ public class VegtableController : MonoBehaviour
         else
         {
             highScore.ReduceScore(vegtable.Price);
+            imageGameObject.SetActive(true);
+            StartCoroutine(showX()); // used together with an IEnumerator, 
         }
 
         timer.Pause();
@@ -221,6 +227,19 @@ public class VegtableController : MonoBehaviour
         LeanTween.scale(gameObject, Vector3.one*2, tweenTime)
         .setEasePunch();
     }
+
+
+    IEnumerator showX() // Kører samtidigt med en Void Update
+    {
+        imageGameObject.SetActive (true); // shows the image because it is true
+
+        yield return new WaitForSeconds(0.5f); // has a tiny pause, return type yield
+
+        imageGameObject.SetActive(false); // then the image is false again
+    }
+
+
+    
 }
 
 
