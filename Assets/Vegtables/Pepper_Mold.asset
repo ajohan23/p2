@@ -21,7 +21,14 @@ MonoBehaviour:
     visible: 1
     tasteable: 1
     feelable: 1
+    smellComment: Smells like dirt!
+    seeComment: That fruit has differently seen better days
+    tasteComment: It has lost it's flavor
+    feelComment: Ehh.. feels moist and wrinkly
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: 190a7bfb1caa46e41bcbbecb343119ab, type: 3}
+      actionComment: Bell pepper can be used just fine, even when very wrinkled!
   correctAction: Cut
+  keepComment: That was impecca-bell
+  trashComment: Do you throw everything out?

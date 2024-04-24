@@ -17,3 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 45684acd115608e4fad03766b86bf38f, type: 3}
   clues: []
   correctAction: Keep
+  keepComment: Now that carrot is good for your eye-sight!
+  trashComment: What a waste!

@@ -21,7 +21,14 @@ MonoBehaviour:
     visible: 1
     tasteable: 1
     feelable: 1
+    smellComment: Smells like a wet blanket.
+    seeComment: Looks rotten to the core!
+    tasteComment: Yuck! Why did you do that?
+    feelComment: Nasty! I got juice on me!
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: cd6defd2886ae104bbc82a2cc19887e4, type: 3}
+      actionComment: Brown, black or orange lettuce cannot be saved
   correctAction: Trash
+  keepComment: Im not gonna eat that..
+  trashComment: Thank god!

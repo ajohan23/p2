@@ -17,11 +17,18 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 5826a5ebf0d83d143b5fe6b90aaa42d6, type: 3}
   clues:
   - foundSprite: {fileID: 21300000, guid: 219a09f2808585a4db741c865aa99a80, type: 3}
-    smellable: 1
+    smellable: 0
     visible: 1
     tasteable: 1
-    feelable: 1
+    feelable: 0
+    smellComment: Do melon skin have a smell?
+    seeComment: That melon looks like a zombie!
+    tasteComment: A taste from flavor hell!
+    feelComment: I think everything is in order, maybe you should investigate further
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: 43596bf0e6dec274da5e64b779057c4d, type: 3}
+      actionComment: Mold infects melons from the inside, so they're a no go!
   correctAction: Trash
+  keepComment: It is safe to eat a melon when mold has sprouted
+  trashComment: Finally you actually trash the right thing!

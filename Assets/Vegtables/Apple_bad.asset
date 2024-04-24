@@ -21,7 +21,15 @@ MonoBehaviour:
     visible: 1
     tasteable: 0
     feelable: 1
+    smellComment: I think everything is in order, maybe you should investigate further
+    seeComment: That fruit has differently seen better days
+    tasteComment: I think everything is in order, maybe you should investigate further
+    feelComment: It feels like an apples existential crisis about its own texture!
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: 9fba89e5dc784be4e838ea2bcb30238f, type: 3}
+      actionComment: Good job! You saved the apple!
   correctAction: Cut
+  keepComment: Apples can be used even with Mold on them, just cut the mold right
+    off!
+  trashComment: Apples that are soggy are no good to eat.

@@ -17,3 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 48ce21065a43d5742995733a5b19d22a, type: 3}
   clues: []
   correctAction: Keep
+  keepComment: Looking great and crispy!
+  trashComment: WRONG! Im gonna tell grandma!

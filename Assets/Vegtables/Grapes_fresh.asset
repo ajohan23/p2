@@ -17,3 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 9ee51365f38992f4f8e2c3ab1a89808a, type: 3}
   clues: []
   correctAction: Keep
+  keepComment: They look purple-lucious!
+  trashComment: Be grapeful you're not a farmer, wasting all that.

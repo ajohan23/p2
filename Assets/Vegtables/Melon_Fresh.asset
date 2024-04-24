@@ -17,3 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 5826a5ebf0d83d143b5fe6b90aaa42d6, type: 3}
   clues: []
   correctAction: Keep
+  keepComment: You're one in a melon!
+  trashComment: What a waste.

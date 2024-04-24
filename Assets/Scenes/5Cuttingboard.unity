@@ -225,6 +225,9 @@ MonoBehaviour:
   highScore: {fileID: 485395241}
   timer: {fileID: 1099048024}
   dialogManager: {fileID: 1487865513}
+  stars: {fileID: 0}
+  tweenTime: 0
+  cross: {fileID: 0}
   vegtable: {fileID: 11400000, guid: 66018a0520e64c74199a807846865769, type: 2}
   vegtables:
   - {fileID: 11400000, guid: 0ea05600078dbfc47957fb935265cd65, type: 2}

@@ -17,3 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: a51b62d78cab4644fa01a72235ce3b85, type: 3}
   clues: []
   correctAction: Keep
+  keepComment: Taters gonna tate!
+  trashComment: Are you a potato?

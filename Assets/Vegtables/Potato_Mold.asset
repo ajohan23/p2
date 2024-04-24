@@ -17,11 +17,18 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: a51b62d78cab4644fa01a72235ce3b85, type: 3}
   clues:
   - foundSprite: {fileID: 21300000, guid: 49dcaac65c5806f498c7dba8014f936c, type: 3}
-    smellable: 1
+    smellable: 0
     visible: 1
-    tasteable: 1
+    tasteable: 0
     feelable: 1
+    smellComment: Well.. they do smell like dirt.
+    seeComment: Ew! Look at all that mold.
+    tasteComment: Tastes like a raw potato
+    feelComment: Feels moisty and a little hairy
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: 8c347b454584cad43a262f15ccd6f6f5, type: 3}
+      actionComment: Haters gonna tate!
   correctAction: Trash
+  keepComment: Green spots or mold on potaotes are not safe to eat
+  trashComment: You did the right thing!
