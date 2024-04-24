@@ -229,6 +229,7 @@ MonoBehaviour:
   tweenTime: 1.5
   cross: {fileID: 655751834}
   vegtable: {fileID: 11400000, guid: 66018a0520e64c74199a807846865769, type: 2}
+  readTime: 2
   vegtables:
   - {fileID: 11400000, guid: 0ea05600078dbfc47957fb935265cd65, type: 2}
   - {fileID: 11400000, guid: 5f7eb095d338a394fb63deaa51042a5a, type: 2}
@@ -254,7 +255,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 321eeaf18825d074fbc0d9bb29bc6e54, type: 2}
   - {fileID: 11400000, guid: 4784f5ac69c1868428c9944790f24dbb, type: 2}
   - {fileID: 11400000, guid: da07ef81b0378cd46a9e00658aa08752, type: 2}
-  CommentorName: Owl
+  CommentorName: You
 --- !u!1 &51208340
 GameObject:
   m_ObjectHideFlags: 0
@@ -6457,6 +6458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeLeft: 30
   TimeOn: 0
+  endSceneId: 4
   TimerTxt: {fileID: 1277502826}
 --- !u!4 &1099048025
 Transform:
