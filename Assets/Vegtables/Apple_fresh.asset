@@ -17,3 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: b7d70211b68cced48a17c07d70eef8c0, type: 3}
   clues: []
   correctAction: Keep
+  keepComment: That's a great apple!
+  trashComment: What a waste!

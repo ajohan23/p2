@@ -17,3 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 32d65d48f36e54f4fb4e093d802d40e7, type: 3}
   clues: []
   correctAction: Keep
+  keepComment: Great choice!
+  trashComment: Are you bananas?

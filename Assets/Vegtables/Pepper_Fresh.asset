@@ -17,3 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 8e787cfb6bd152a4e9ded7f9bad55310, type: 3}
   clues: []
   correctAction: Keep
+  keepComment: That was impecca-bell
+  trashComment: HERESY!

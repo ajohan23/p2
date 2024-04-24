@@ -17,11 +17,18 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 5826a5ebf0d83d143b5fe6b90aaa42d6, type: 3}
   clues:
   - foundSprite: {fileID: 21300000, guid: 08b215a699328934f98f52a2f54ea79d, type: 3}
-    smellable: 1
+    smellable: 0
     visible: 1
     tasteable: 0
     feelable: 1
+    smellComment: Do melon skin have a smell?
+    seeComment: That melon looks like a zombie!
+    tasteComment: Tastes like a melon to me.
+    feelComment: Ew! Like pudding between my feathers
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: 40dc43603a5e4f24c8f096610d8649d6, type: 3}
+      actionComment: Browns spots on the melons armor can just be cut right off.
   correctAction: Cut
+  keepComment: You're one in a melon!
+  trashComment: Why did you do that?

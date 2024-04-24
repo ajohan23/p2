@@ -21,7 +21,14 @@ MonoBehaviour:
     visible: 1
     tasteable: 1
     feelable: 0
+    smellComment: Do grapes have a smell?
+    seeComment: Those grapes are looking like raisins!
+    tasteComment: Phua! Tastes like a fruit with a sour attitude!
+    feelComment: Yep that is a grape.
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: 7025cf17bfb747e4f8461e5cb0ff0d5a, type: 3}
+      actionComment: Bad grapes can be picked off and the rest are usaully fine.
   correctAction: Cut
+  keepComment: Look at all em' grapes!
+  trashComment: Poor thing it wines!

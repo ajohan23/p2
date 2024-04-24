@@ -21,7 +21,14 @@ MonoBehaviour:
     visible: 1
     tasteable: 0
     feelable: 1
+    smellComment: Smells like ketchup
+    seeComment: Straight out of a horror movie!
+    tasteComment: Tastes like a tomato
+    feelComment: Ew! Pinched right through it!
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: ca43e2e9384482c4cbd7ef0f37f7984c, type: 3}
+      actionComment: Mold on tomato should be thrown away immedialty
   correctAction: Trash
+  keepComment: Are you trying to kill me?
+  trashComment: Great i didn't die!
