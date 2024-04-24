@@ -83,6 +83,11 @@ public class VegtableController : MonoBehaviour
 
     public void PerformSaveAction(SavingAction action) // Called when an action button is pressed
     {
+        if (!isOpenForInput) //Cancel if we dont accept input
+        {
+            return;
+        }
+
         spriteRenderer.sprite = action.actionSprite;
         dialogManager.StartDialogue(new Dialogue(CommentorName, action.actionComment));
         Action(action.name);

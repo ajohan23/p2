@@ -9,6 +9,7 @@ public class TimaerScript : MonoBehaviour
 {
     public float TimeLeft;
     public bool TimeOn = false;
+    public int endSceneId = 4; //The id of the scene to load when the time is up
 
     public TextMeshProUGUI TimerTxt;
 
@@ -43,7 +44,7 @@ public class TimaerScript : MonoBehaviour
 
         if (TimeLeft < 0)
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(endSceneId);
         }
         
     }
