@@ -12,9 +12,9 @@ public class VegtableController : MonoBehaviour
     [SerializeField] TimaerScript timer;
     [SerializeField] DialogManager dialogManager;
 
-    [SerializeField] ParticleSystem part; // staaaaars!
+    [SerializeField] ParticleSystem stars; // staaaaars!
     public float tweenTime; // tween
-    public GameObject imageGameObject;
+    public GameObject cross;
 
     //Variables
     [SerializeField] Vegtable vegtable;
@@ -28,7 +28,7 @@ public class VegtableController : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        imageGameObject.SetActive(false);
+        cross.SetActive(false);
     }
 
     private void Start()
@@ -166,13 +166,13 @@ public class VegtableController : MonoBehaviour
         {
             highScore.AddScore(vegtable.Price);
             tweenImage();
-            part.Play();
+            stars.Play();
             
         }
         else
         {
             highScore.ReduceScore(vegtable.Price);
-            StartCoroutine(showX()); // used together with an IEnumerator,
+            StartCoroutine(showCross()); // used together with an IEnumerator,
         }
 
         timer.Pause();
@@ -184,6 +184,7 @@ public class VegtableController : MonoBehaviour
     void ChooseRandomVegtable()
     {
         timer.UnPause();
+        stars.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         HideComment();
         vegtable = vegtables[Random.Range(0, vegtables.Length)];
         spriteRenderer.sprite = vegtable.deafaultSprite;
@@ -220,11 +221,11 @@ public class VegtableController : MonoBehaviour
         .setEasePunch();
     }
 
-    IEnumerator showX() // Kører samtidigt med en Void Update
+    IEnumerator showCross() // Kører samtidigt med en Void Update
     {
-        imageGameObject.SetActive (true); // shows the image because it is true
+        cross.SetActive (true); // shows the image because it is true
         yield return new WaitForSeconds(0.55f); // has a tiny pause, return type yield
-        imageGameObject.SetActive(false); // then the image is false again
+        cross.SetActive(false); // then the image is false again
     }
 }
 
