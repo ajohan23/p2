@@ -18,6 +18,7 @@ public class VegtableController : MonoBehaviour
 
     //Variables
     [SerializeField] Vegtable vegtable;
+    [SerializeField] float readTime = 2f;
     SpriteRenderer spriteRenderer;
     public Vegtable[] vegtables;
     List<ActionButton> existingActions = new List<ActionButton>();
@@ -119,8 +120,8 @@ public class VegtableController : MonoBehaviour
 
         }
 
-        pauseInput(1f);
-        Invoke("HideComment", 1f);
+        pauseInput(readTime);
+        Invoke("HideComment", readTime);
         spriteRenderer.sprite = clue.foundSprite;
         CreateActionButton(clue.action);
     }
@@ -182,8 +183,8 @@ public class VegtableController : MonoBehaviour
 
         timer.Pause();
         ClearActionButtons();
-        pauseInput(1f);
-        Invoke("ChooseRandomVegtable", 1.0f);
+        pauseInput(readTime);
+        Invoke("ChooseRandomVegtable", readTime);
     }
 
     void ChooseRandomVegtable()
