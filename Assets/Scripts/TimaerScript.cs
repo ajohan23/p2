@@ -13,6 +13,9 @@ public class TimaerScript : MonoBehaviour
 
     public TextMeshProUGUI TimerTxt;
 
+    //refrences
+    [SerializeField] VegtableController VegtableController;
+
     void Start()
     {
         TimeOn = true;
@@ -42,8 +45,16 @@ public class TimaerScript : MonoBehaviour
 
         TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds);
 
-        if (TimeLeft < 0)
+        if (TimeLeft <= 0)
         {
+            if (VegtableController != null)
+            {
+                VegtableController.LogData();
+            }
+            else
+            {
+                Debug.Log("VegtableController not set");
+            }
             SceneManager.LoadScene(endSceneId);
         }
         
