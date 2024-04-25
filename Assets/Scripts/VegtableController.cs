@@ -189,6 +189,7 @@ public class VegtableController : MonoBehaviour
 
     void ChooseRandomVegtable()
     {
+        tweenImage();
         timer.UnPause();
         stars.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         HideComment();
