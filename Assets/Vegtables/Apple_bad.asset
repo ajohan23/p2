@@ -21,10 +21,10 @@ MonoBehaviour:
     visible: 1
     tasteable: 0
     feelable: 1
-    smellComment: I think everything is in order, maybe you should investigate further
-    seeComment: That fruit has differently seen better days
-    tasteComment: I think everything is in order, maybe you should investigate further
-    feelComment: It feels like an apples existential crisis about its own texture!
+    smellComment: Smells fine, investigate more
+    seeComment: That apple has seen better days
+    tasteComment: Tastes fine, investigate more
+    feelComment: An apples texture crisis!
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: 9fba89e5dc784be4e838ea2bcb30238f, type: 3}

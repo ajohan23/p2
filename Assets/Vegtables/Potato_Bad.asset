@@ -21,7 +21,7 @@ MonoBehaviour:
     visible: 1
     tasteable: 0
     feelable: 1
-    smellComment: Well.. they do smell like dirt.
+    smellComment: Potatoes do smell like dirt.
     seeComment: That's a lot of roots!
     tasteComment: Tastes like a raw potato
     feelComment: Ouch! A little thorny.
@@ -30,5 +30,5 @@ MonoBehaviour:
       actionSprite: {fileID: 21300000, guid: 2fd9b6914a674ca46b623c4e4ec2ebb8, type: 3}
       actionComment: Taters gonna tate!
   correctAction: Cut
-  keepComment: Roots can be chopped right off!
+  keepComment: Just them off!
   trashComment: Are you a potato?

@@ -21,15 +21,14 @@ MonoBehaviour:
     visible: 1
     tasteable: 0
     feelable: 1
-    smellComment: I think everything is in order, maybe you should investigate further
-    seeComment: Wasn't a carrot supposed to be good for your eyesight?
-    tasteComment: I think everything is in order, maybe you should investigate further
-    feelComment: It feels like a fruit that's taken up a new career as a stress ball
+    smellComment: Smells fine, investigate more
+    seeComment: Wasn't carrots good for eyesight?
+    tasteComment: Tastes fine, investigate more
+    feelComment: The carrot is bendy
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: 211c976a04c85dd43ab02502ac60e625, type: 3}
-      actionComment: Soft bendy carrots can be used warm dishes, if placed in water
-        they will turn back into a firm carrot!
+      actionComment: You carrot me fooled!!
   correctAction: Cut
   keepComment: You saw right through that!
-  trashComment: Try eating more carrots..
+  trashComment: That carrot be!

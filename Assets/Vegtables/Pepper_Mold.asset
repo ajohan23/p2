@@ -19,11 +19,11 @@ MonoBehaviour:
   - foundSprite: {fileID: 21300000, guid: ab22be40c3eb26e43bcc7e8cf81f58f1, type: 3}
     smellable: 1
     visible: 1
-    tasteable: 1
+    tasteable: 0
     feelable: 1
-    smellComment: Smells like dirt!
-    seeComment: That fruit has differently seen better days
-    tasteComment: It has lost it's flavor
+    smellComment: Smells off..
+    seeComment: That pepper  has seen better days
+    tasteComment: Tastes fine, investigate more
     feelComment: Ehh.. feels moist and wrinkly
     action:
       name: Cut

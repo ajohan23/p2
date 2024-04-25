@@ -17,5 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 24ff338ea49ee0943b1471bcbcac4171, type: 3}
   clues: []
   correctAction: Keep
-  keepComment: Great job! Even the brownest bananas can be used in baking recipes!
-  trashComment: Are you bananas?
+  keepComment: Brown bananas are great!
+  trashComment: WRONG! Im gonna tell grandma!

@@ -21,15 +21,14 @@ MonoBehaviour:
     visible: 1
     tasteable: 0
     feelable: 1
-    smellComment: I think everything is in order, maybe you should investigate further
+    smellComment: Smells fine, investigate more
     seeComment: That carrot has seen better days!
-    tasteComment: I think everything is in order, maybe you should investigate further
-    feelComment: Yuck! It bends like a sausage!
+    tasteComment: Tastes fine, investigate more
+    feelComment: It bends like sausages!
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: 211c976a04c85dd43ab02502ac60e625, type: 3}
-      actionComment: Soft bendy carrots can be used warm dishes, if placed in water
-        they will turn back into a firm carrot!
+      actionComment: You carrot me fooled!!
   correctAction: Cut
-  keepComment: Now that carrot is good for your eye-sight!
-  trashComment: What a waste!
+  keepComment: You saw right through that!
+  trashComment: What a waste..

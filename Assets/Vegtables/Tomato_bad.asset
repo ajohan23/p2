@@ -21,9 +21,9 @@ MonoBehaviour:
     visible: 1
     tasteable: 0
     feelable: 1
-    smellComment: Smells like ketchup
-    seeComment: Straight out of a horror movie!
-    tasteComment: Tastes like a tomato
+    smellComment: Smells fine, investigate more
+    seeComment: Like a horror movie!
+    tasteComment: Tastes fine, investigate more
     feelComment: Ew! Pinched right through it!
     action:
       name: Cut

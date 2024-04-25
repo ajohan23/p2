@@ -18,4 +18,4 @@ MonoBehaviour:
   clues: []
   correctAction: Keep
   keepComment: You're one in a melon!
-  trashComment: What a waste.
+  trashComment: What a waste!

@@ -17,5 +17,5 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: fc81e9b29ba3c3a4988508e029cbc96a, type: 3}
   clues: []
   correctAction: Keep
-  keepComment: Great now it can be made into ketchup!
+  keepComment: Nam Nam Nam
   trashComment: You better be joking

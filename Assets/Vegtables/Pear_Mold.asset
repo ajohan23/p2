@@ -17,13 +17,13 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 0ebda26493555dd4a8616620b7adec6b, type: 3}
   clues:
   - foundSprite: {fileID: 21300000, guid: 9b67c07aad8598443b043bcb756940c4, type: 3}
-    smellable: 1
+    smellable: 0
     visible: 1
-    tasteable: 1
+    tasteable: 0
     feelable: 1
-    smellComment: Smells a little off.
+    smellComment: Smells fine, investigate more
     seeComment: That pear has seen better days!
-    tasteComment: A punishment from the food gods!
+    tasteComment: Tastes fine, investigate more
     feelComment: Yuck! Like pudding between my feathers!
     action:
       name: Cut
