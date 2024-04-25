@@ -6512,7 +6512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeLeft: 30
   TimeOn: 0
-  endSceneId: 4
+  endSceneId: 3
   TimerTxt: {fileID: 1277502826}
   VegtableController: {fileID: 20456167}
 --- !u!4 &1099048025
