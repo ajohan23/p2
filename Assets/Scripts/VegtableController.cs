@@ -25,6 +25,18 @@ public class VegtableController : MonoBehaviour
     bool isOpenForInput = true; //Makes sure that the player cant press actions when they are not supossed to
     [SerializeField] string CommentorName = "Owl"; //The name displayed when a comment is posted
 
+    //Datalogging
+    LoggingManager logManager;
+    int totalFruit = 0;
+    int correctAnswers = 0;
+    int sensesUsed = 0;
+    int cluesFound = 0;
+    string logName = "fruit_log";
+    string totalFruitColumnName = "Total Fruit";
+    string correctAnswerColumnName = "Correct Answers";
+    string sensesUsedColumnName = "Senses Used";
+    string cluesFoundColumnName = "Clues Found";
+
     //Unity callbacks
     private void Awake()
     {
@@ -35,11 +47,13 @@ public class VegtableController : MonoBehaviour
     private void Start()
     {
         ChooseRandomVegtable();
+        logManager = FindAnyObjectByType<LoggingManager>();
     }
 
     //Methods
     public void Smell() //Inspection method used when the player smells the vegtable
     {
+        sensesUsed++;
         foreach(Clue clue in vegtable.clues)
         {
             if (clue.smellable)
@@ -50,7 +64,8 @@ public class VegtableController : MonoBehaviour
     }
 
     public void Taste () //Inspection method used when the player tastes the vegtable
-    { 
+    {
+        sensesUsed++;
         foreach (Clue clue in vegtable.clues)
         {
             if (clue.tasteable)
@@ -62,6 +77,7 @@ public class VegtableController : MonoBehaviour
 
     public void Feel() //Inspection method used when the player touches the vegtable
     {
+        sensesUsed++;
         foreach (Clue clue in vegtable.clues)
         {
             if (clue.feelable)
@@ -73,6 +89,7 @@ public class VegtableController : MonoBehaviour
 
     public void See() //Inspection method used when the player looks at the vegtable
     {
+        sensesUsed++;
         foreach (Clue clue in vegtable.clues)
         {
             if (clue.visible)
@@ -101,6 +118,7 @@ public class VegtableController : MonoBehaviour
             return;
         }
 
+        cluesFound++;
         switch(sense)
         {
             case "see":
@@ -173,7 +191,7 @@ public class VegtableController : MonoBehaviour
             highScore.AddScore(vegtable.Price);
             tweenImage();
             stars.Play();
-            
+            correctAnswers++;
         }
         else
         {
@@ -189,6 +207,7 @@ public class VegtableController : MonoBehaviour
 
     void ChooseRandomVegtable()
     {
+        totalFruit++;
         timer.UnPause();
         stars.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         HideComment();
@@ -232,6 +251,27 @@ public class VegtableController : MonoBehaviour
         cross.SetActive (true); // shows the image because it is true
         yield return new WaitForSeconds(0.55f); // has a tiny pause, return type yield
         cross.SetActive(false); // then the image is false again
+    }
+
+    public void LogData()
+    {
+        if (logManager != null)
+        {
+            logManager.CreateLog(logName, headers: new List<string>() { totalFruitColumnName, correctAnswerColumnName, sensesUsedColumnName, cluesFoundColumnName});
+            Dictionary<string, object> data = new Dictionary<string, object>()
+            {
+                {totalFruitColumnName, totalFruit},
+                {correctAnswerColumnName, correctAnswers},
+                {sensesUsedColumnName, sensesUsed},
+                {cluesFoundColumnName, cluesFound}
+            };
+            logManager.Log(logName, data);
+            logManager.SaveLog(logName, clear:true, TargetType.CSV);
+        }
+        else
+        {
+            Debug.Log("Log Manager not found");
+        }
     }
 }
 

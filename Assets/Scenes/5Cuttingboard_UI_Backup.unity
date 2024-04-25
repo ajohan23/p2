@@ -6427,6 +6427,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867909880}
   m_CullTransparentMesh: 1
+--- !u!1 &908898553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 908898555}
+  - component: {fileID: 908898554}
+  m_Layer: 0
+  m_Name: LoggingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &908898554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908898553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8044bb5719035e14ab33f5a950770e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreateMetaCollection: 1
+  enableMySQLSave: 0
+  email: anonymous
+  connectToMySQL: {fileID: 0}
+  enableCSVSave: 1
+  logStringOverTime: 1
+  savePath: 
+  filePrefix: log
+  fileExtension: .csv
+--- !u!4 &908898555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908898553}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 276, y: 953, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1099048023
 GameObject:
   m_ObjectHideFlags: 0
@@ -6460,6 +6513,7 @@ MonoBehaviour:
   TimeOn: 0
   endSceneId: 4
   TimerTxt: {fileID: 1277502826}
+  VegtableController: {fileID: 20456167}
 --- !u!4 &1099048025
 Transform:
   m_ObjectHideFlags: 0
@@ -8045,3 +8099,4 @@ SceneRoots:
   - {fileID: 1319739823}
   - {fileID: 753052296}
   - {fileID: 655751836}
+  - {fileID: 908898555}
