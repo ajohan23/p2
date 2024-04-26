@@ -195,6 +195,7 @@ public class VegtableController : MonoBehaviour
         }
         else
         {
+            DisplayClueSprite(); //This is called to show the user that the vegtable was rotten in case they never found any clues
             highScore.ReduceScore(vegtable.Price);
             StartCoroutine(showCross()); // used together with an IEnumerator,
         }
@@ -272,6 +273,14 @@ public class VegtableController : MonoBehaviour
         else
         {
             Debug.Log("Log Manager not found");
+        }
+    }
+
+    void DisplayClueSprite()
+    {
+        if (vegtable.clues.Length > 0)
+        {
+            spriteRenderer.sprite = vegtable.clues[0].foundSprite;
         }
     }
 }
