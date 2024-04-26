@@ -109,6 +109,7 @@ public class VegtableController : MonoBehaviour
         {
             return;
         }
+        soundPlayer.SoundsCut();
 
         spriteRenderer.sprite = action.actionSprite;
         dialogManager.StartDialogue(new Dialogue(CommentorName, action.actionComment));
@@ -176,6 +177,7 @@ public class VegtableController : MonoBehaviour
     {
         dialogManager.StartDialogue(new Dialogue(CommentorName, vegtable.trashComment));
         Action("Trash");
+        soundPlayer.SoundsTrashBin();
     }
 
     public void Keep()

@@ -7,16 +7,20 @@ using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
+   
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
     public Animator animator;
+    [SerializeField] SoundPlayer soundPlayer;
 
     public Queue<string> sentences = new Queue<string>();
 
     // Update is called once per frame
     public void StartDialogue (Dialogue dialogue)
     {
+        // soundPlayer.SoundsGibberish();
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
         sentences.Clear();
@@ -24,7 +28,6 @@ public class DialogManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
         DisplayNextSentences();
 
     }
