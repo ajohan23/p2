@@ -23,6 +23,7 @@ public class TimaerScript : MonoBehaviour
 
     void Update()
     {
+        DetermineColor();
         if(TimeOn)
         {
             if(TimeLeft > 0)
@@ -55,7 +56,7 @@ public class TimaerScript : MonoBehaviour
             {
                 Debug.Log("VegtableController not set");
             }
-            SceneManager.LoadScene(endSceneId);
+            Invoke("ChangeScene", 5f);
         }
         
     }
@@ -66,5 +67,26 @@ public class TimaerScript : MonoBehaviour
     public void UnPause()
     {
         TimeOn = true;
+    }
+
+    void DetermineColor()
+    {
+        if (TimeLeft <= 0)
+        {
+            TimerTxt.color = Color.red;
+        }
+        else if (TimeOn == false) 
+        {
+            TimerTxt.color = Color.yellow;
+        }
+        else
+        {
+            TimerTxt.color = Color.white;
+        }
+    }
+
+    void ChangeScene()
+    {
+        SceneManager.LoadScene(endSceneId);
     }
 }

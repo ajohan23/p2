@@ -256,6 +256,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4784f5ac69c1868428c9944790f24dbb, type: 2}
   - {fileID: 11400000, guid: da07ef81b0378cd46a9e00658aa08752, type: 2}
   CommentorName: You
+  buttons:
+  - {fileID: 316936525}
+  - {fileID: 855534983}
+  - {fileID: 1478127268}
+  - {fileID: 1485555539}
+  - {fileID: 1500846829}
+  - {fileID: 867909882}
 --- !u!1 &51208340
 GameObject:
   m_ObjectHideFlags: 0

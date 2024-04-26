@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class VegtableController : MonoBehaviour
@@ -24,6 +25,8 @@ public class VegtableController : MonoBehaviour
     List<ActionButton> existingActions = new List<ActionButton>();
     bool isOpenForInput = true; //Makes sure that the player cant press actions when they are not supossed to
     [SerializeField] string CommentorName = "Owl"; //The name displayed when a comment is posted
+    [SerializeField]
+    Button[] buttons = new Button[0];
 
     //Datalogging
     LoggingManager logManager;
@@ -138,10 +141,10 @@ public class VegtableController : MonoBehaviour
 
         }
 
-        pauseInput(readTime);
         Invoke("HideComment", readTime);
         spriteRenderer.sprite = clue.foundSprite;
         CreateActionButton(clue.action);
+        pauseInput(readTime);
     }
 
     void CreateActionButton(SavingAction action) //Creates and initializes a new action button with the given action
@@ -233,13 +236,20 @@ public class VegtableController : MonoBehaviour
 
     void pauseInput(float time)
     {
-        isOpenForInput = false;
+        StopInput();
         Invoke("enableInput", time);
     }
 
     void enableInput()
     {
+        EnableButtons(true);
         isOpenForInput = true;
+    }
+
+    public void StopInput()
+    {
+        EnableButtons(false);
+        isOpenForInput = false;
     }
 
     public void tweenImage()
@@ -281,6 +291,25 @@ public class VegtableController : MonoBehaviour
         if (vegtable.clues.Length > 0)
         {
             spriteRenderer.sprite = vegtable.clues[0].foundSprite;
+        }
+    }
+
+    void EnableButtons(bool enable)
+    {
+        //Enable all normal buttons
+        foreach (Button button in buttons)
+        {
+            button.interactable = enable;
+        }
+
+        //Enable all action buttons
+        foreach (ActionButton actionButton in existingActions)
+        {
+            Button _button = actionButton.GetComponent<Button>();
+            if (_button != null )
+            {
+                _button.interactable = enable;
+            }
         }
     }
 }
