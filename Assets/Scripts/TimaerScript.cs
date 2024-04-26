@@ -50,6 +50,7 @@ public class TimaerScript : MonoBehaviour
         {
             if (VegtableController != null)
             {
+                VegtableController.StopInput();
                 VegtableController.LogData();
             }
             else
