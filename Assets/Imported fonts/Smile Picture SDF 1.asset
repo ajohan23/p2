@@ -169,9 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Smile Picture SDF 1
   m_EditorClassIdentifier: 
-  hashCode: -1659904381
+  hashCode: 545359634
   material: {fileID: -5155350598207156956}
-  materialHashCode: -1918200253
+  materialHashCode: -131148686
   m_Version: 1.1.0
   m_SourceFontFileGUID: 450e44e235959e34e8e8b693954306b2
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 450e44e235959e34e8e8b693954306b2, type: 3}

@@ -17,14 +17,14 @@ MonoBehaviour:
   deafaultSprite: {fileID: 21300000, guid: 0ebda26493555dd4a8616620b7adec6b, type: 3}
   clues:
   - foundSprite: {fileID: 21300000, guid: d4bc8cc9a5948e246a518866c8bf0c99, type: 3}
-    smellable: 1
+    smellable: 0
     visible: 1
     tasteable: 0
     feelable: 1
-    smellComment: Smells a little off.
+    smellComment: Smells fine, investigate more
     seeComment: It a-ppeard!
-    tasteComment: That's a pear.
-    feelComment: Yuck! Like pudding between my feathers!
+    tasteComment: Tastes fine, investigate more
+    feelComment: Pinched right through it!
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: ffeaad645bf66504891c29c88e099f5e, type: 3}

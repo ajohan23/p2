@@ -21,8 +21,8 @@ MonoBehaviour:
     visible: 1
     tasteable: 0
     feelable: 1
-    smellComment: Smells like a pepper
-    seeComment: That fruit has differently seen better days
+    smellComment: Smells fine, investigate more
+    seeComment: That pepper has seen better days
     tasteComment: Yep that's a pepper
     feelComment: Ehh.. feels dry and wrinkly
     action:
@@ -31,4 +31,4 @@ MonoBehaviour:
       actionComment: Bell pepper can be used just fine, even when very wrinkled!
   correctAction: Cut
   keepComment: That was impecca-bell
-  trashComment: Do you throw everything out?
+  trashComment: Throwing everything out?

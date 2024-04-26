@@ -21,7 +21,7 @@ MonoBehaviour:
     visible: 1
     tasteable: 1
     feelable: 1
-    smellComment: Smells like a wet blanket.
+    smellComment: Smells like wet blankets.
     seeComment: Looks rotten to the core!
     tasteComment: Yuck! Why did you do that?
     feelComment: Nasty! I got juice on me!
@@ -31,4 +31,4 @@ MonoBehaviour:
       actionComment: Brown, black or orange lettuce cannot be saved
   correctAction: Trash
   keepComment: Im not gonna eat that..
-  trashComment: Thank god!
+  trashComment: Great i didn't die!

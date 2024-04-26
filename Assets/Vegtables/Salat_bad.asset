@@ -22,15 +22,13 @@ MonoBehaviour:
     tasteable: 1
     feelable: 1
     smellComment: Smells like water.
-    seeComment: It looks wrong.
+    seeComment: It looks a little wrong.
     tasteComment: Yuck! Tastes like a wet towel.
-    feelComment: Yuck! It is all soggy.
+    feelComment: Eh.. It is all soggy..
     action:
       name: Cut
       actionSprite: {fileID: 21300000, guid: cd6defd2886ae104bbc82a2cc19887e4, type: 3}
       actionComment: Nicely done, the bad layers can be peeled off
   correctAction: Cut
-  keepComment: Soggy letuce can be put in water and will turn crisp again after 20
-    minutes.
-  trashComment: You didn't have to throw the entire thing out! Just peel off the
-    bad layers!
+  keepComment: Peel bad layers off and it's fine!
+  trashComment: Noo.. peel the layers off!
