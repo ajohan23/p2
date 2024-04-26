@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: af1fd262234afe044ae639dc9ebb54ee
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lyd: {instanceID: 0}
+  - sfxSaved1: {fileID: 8300000, guid: 714c9330910a7dc46bb26f4f4c6b777d, type: 3}
+  - sfxSaved2: {fileID: 8300000, guid: 3c84550a832891343a69a732657fbac6, type: 3}
+  - sfxWrong1: {fileID: 8300000, guid: d07a95ba901599042ad3c2c805abe12c, type: 3}
+  - sfxWrong2: {fileID: 8300000, guid: 8d9c946c5cfb93149bbb7990c8d41fa6, type: 3}
+  - sfxBirdGibberish5: {instanceID: 0}
+  - sfxGrandmaGibberish6: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

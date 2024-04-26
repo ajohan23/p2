@@ -12,10 +12,11 @@ public class VegtableController : MonoBehaviour
     [SerializeField] HighScore highScore;
     [SerializeField] TimaerScript timer;
     [SerializeField] DialogManager dialogManager;
-
+    [SerializeField] SoundPlayer soundPlayer;
     [SerializeField] ParticleSystem stars; // staaaaars!
     public float tweenTime; // tween
     public GameObject cross;
+    
 
     //Variables
     [SerializeField] Vegtable vegtable;
@@ -195,11 +196,13 @@ public class VegtableController : MonoBehaviour
             tweenImage();
             stars.Play();
             correctAnswers++;
+            soundPlayer.SoundsSaved();
         }
         else
         {
             DisplayClueSprite(); //This is called to show the user that the vegtable was rotten in case they never found any clues
             highScore.ReduceScore(vegtable.Price);
+            soundPlayer.SoundsWasted();
             StartCoroutine(showCross()); // used together with an IEnumerator,
         }
 

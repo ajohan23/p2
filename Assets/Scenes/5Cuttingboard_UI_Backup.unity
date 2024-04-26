@@ -228,6 +228,13 @@ MonoBehaviour:
   stars: {fileID: 753052295}
   tweenTime: 1.5
   cross: {fileID: 655751834}
+  lyd: {fileID: 0}
+  sfxSaved1: {fileID: 0}
+  sfxSaved2: {fileID: 0}
+  sf3Wrong: {fileID: 0}
+  sf4Wrong: {fileID: 0}
+  sf5BirdGibberish: {fileID: 0}
+  sfx6GrandmaGibberish: {fileID: 0}
   vegtable: {fileID: 11400000, guid: 66018a0520e64c74199a807846865769, type: 2}
   readTime: 2
   vegtables:
