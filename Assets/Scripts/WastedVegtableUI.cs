@@ -17,7 +17,7 @@ public class WastedVegtableUI : MonoBehaviour
         {
             PlayerPrefs.SetInt("SavedHighScore", lastScore);
         }
-        textLastScore.text = $"You Wasted {PlayerPrefs.GetInt("LastScore")}kr";
+        textLastScore.text = $"You Saved {PlayerPrefs.GetInt("LastScore")}kr";
         textHighscore.text = $"Highest amount saved: {PlayerPrefs.GetInt("SavedHighScore")}kr";
     }
 }
