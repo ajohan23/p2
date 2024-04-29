@@ -86,15 +86,15 @@ public class TimaerScript : MonoBehaviour
     void TimesUp()
     {
         if (VegtableController != null)
-        {
-            VegtableController.StopInput();
-            VegtableController.LogData();
-        }
-        else
-        {
-            Debug.Log("VegtableController not set");
-        }
-        timesUpText.SetActive(true);
-        Invoke("ChangeScene", 5f);
+            {
+                VegtableController.StopInput();
+                VegtableController.LogData();
+            }
+            else
+            {
+                Debug.Log("VegtableController not set");
+            }
+            timesUpText.SetActive(true);
+            Invoke("ChangeScene", 5f);
     }
 }

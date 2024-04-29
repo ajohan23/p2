@@ -24,10 +24,10 @@ public class Clue
     public bool tasteable = false;
     public bool feelable = false;
 
-    public string smellComment = "MISSING COMMENT!";
-    public string seeComment = "MISSING COMMENT!";
-    public string tasteComment = "MISSING COMMENT!";
-    public string feelComment = "MISSING COMMENT!";
+    public string smellComment = "Smells fine";
+    public string seeComment = "Looks fine";
+    public string tasteComment = "Tastes fine";
+    public string feelComment = "Feels fine";
 
     public SavingAction action;
 }

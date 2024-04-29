@@ -62,8 +62,11 @@ public class VegtableController : MonoBehaviour
         {
             if (clue.smellable)
             {
-                ClueFound(clue, "smell");
+                ClueFound(clue);
             }
+            dialogManager.StartDialogue(new Dialogue(CommentorName, clue.smellComment));
+            Invoke("HideComment", readTime);
+            pauseInput(readTime);
         }
     }
 
@@ -74,8 +77,11 @@ public class VegtableController : MonoBehaviour
         {
             if (clue.tasteable)
             {
-                ClueFound(clue, "taste");
+                ClueFound(clue);
             }
+            dialogManager.StartDialogue(new Dialogue(CommentorName, clue.tasteComment));
+            Invoke("HideComment", readTime);
+            pauseInput(readTime);
         }
     }
 
@@ -86,8 +92,11 @@ public class VegtableController : MonoBehaviour
         {
             if (clue.feelable)
             {
-                ClueFound(clue, "feel");
+                ClueFound(clue);
             }
+            dialogManager.StartDialogue(new Dialogue(CommentorName, clue.feelComment));
+            Invoke("HideComment", readTime);
+            pauseInput(readTime);
         }
     }
 
@@ -98,8 +107,11 @@ public class VegtableController : MonoBehaviour
         {
             if (clue.visible)
             {
-                ClueFound(clue, "see");
+                ClueFound(clue);
             }
+            dialogManager.StartDialogue(new Dialogue(CommentorName, clue.seeComment));
+            Invoke("HideComment", readTime);
+            pauseInput(readTime);
         }
     }
 
@@ -116,37 +128,15 @@ public class VegtableController : MonoBehaviour
         Action(action.name);
     }
 
-    void ClueFound(Clue clue, string sense) // Updates the visauls of the vegtable and creates a new action button
+    void ClueFound(Clue clue) // Updates the visauls of the vegtable and creates a new action button
     {
         if (!isOpenForInput) //Cancel if we dont accept input
         {
             return;
         }
 
-        cluesFound++;
-        switch(sense)
-        {
-            case "see":
-                dialogManager.StartDialogue(new Dialogue(CommentorName, clue.seeComment));
-                break;
-            case "smell":
-                dialogManager.StartDialogue(new Dialogue(CommentorName, clue.smellComment));
-                break;
-            case "feel":
-                dialogManager.StartDialogue(new Dialogue(CommentorName, clue.feelComment));
-                break;
-            case "taste":
-                dialogManager.StartDialogue(new Dialogue(CommentorName, clue.tasteComment));
-                break;
-            default:
-                break;
-
-        }
-
-        Invoke("HideComment", readTime);
         spriteRenderer.sprite = clue.foundSprite;
         CreateActionButton(clue.action);
-        pauseInput(readTime);
     }
 
     void CreateActionButton(SavingAction action) //Creates and initializes a new action button with the given action

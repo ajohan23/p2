@@ -15,7 +15,20 @@ MonoBehaviour:
   Name: Grapes
   Price: 20
   deafaultSprite: {fileID: 21300000, guid: 9ee51365f38992f4f8e2c3ab1a89808a, type: 3}
-  clues: []
+  clues:
+  - foundSprite: {fileID: 21300000, guid: 9ee51365f38992f4f8e2c3ab1a89808a, type: 3}
+    smellable: 0
+    visible: 0
+    tasteable: 0
+    feelable: 0
+    smellComment: Smells fine
+    seeComment: Looks fine
+    tasteComment: Tastes fine
+    feelComment: Feels fine
+    action:
+      name: 
+      actionSprite: {fileID: 21300000, guid: 9ee51365f38992f4f8e2c3ab1a89808a, type: 3}
+      actionComment: 
   correctAction: Keep
   keepComment: They look purple-lucious!
   trashComment: Be more grapeful with food!

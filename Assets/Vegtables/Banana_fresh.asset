@@ -15,7 +15,20 @@ MonoBehaviour:
   Name: Banana
   Price: 3
   deafaultSprite: {fileID: 21300000, guid: 32d65d48f36e54f4fb4e093d802d40e7, type: 3}
-  clues: []
+  clues:
+  - foundSprite: {fileID: 21300000, guid: 32d65d48f36e54f4fb4e093d802d40e7, type: 3}
+    smellable: 0
+    visible: 0
+    tasteable: 0
+    feelable: 0
+    smellComment: 
+    seeComment: 
+    tasteComment: 
+    feelComment: 
+    action:
+      name: 
+      actionSprite: {fileID: 21300000, guid: 32d65d48f36e54f4fb4e093d802d40e7, type: 3}
+      actionComment: 
   correctAction: Keep
   keepComment: Great choice!
   trashComment: Are you bananas?
