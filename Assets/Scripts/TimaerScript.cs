@@ -12,6 +12,7 @@ public class TimaerScript : MonoBehaviour
     public int endSceneId = 4; //The id of the scene to load when the time is up
 
     public TextMeshProUGUI TimerTxt;
+    public GameObject timesUpText;
 
     //refrences
     [SerializeField] VegtableController VegtableController;
@@ -48,16 +49,7 @@ public class TimaerScript : MonoBehaviour
 
         if (TimeLeft <= 0)
         {
-            if (VegtableController != null)
-            {
-                VegtableController.StopInput();
-                VegtableController.LogData();
-            }
-            else
-            {
-                Debug.Log("VegtableController not set");
-            }
-            Invoke("ChangeScene", 5f);
+            TimesUp();
         }
         
     }
@@ -89,5 +81,20 @@ public class TimaerScript : MonoBehaviour
     void ChangeScene()
     {
         SceneManager.LoadScene(endSceneId);
+    }
+
+    void TimesUp()
+    {
+        if (VegtableController != null)
+        {
+            VegtableController.StopInput();
+            VegtableController.LogData();
+        }
+        else
+        {
+            Debug.Log("VegtableController not set");
+        }
+        timesUpText.SetActive(true);
+        Invoke("ChangeScene", 5f);
     }
 }
