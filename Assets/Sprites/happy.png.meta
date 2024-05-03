@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 6d874e7997e4fd249bb59bee6a23b63c
+guid: 99d90b0d030f95a408fcac3cbb1c7f8c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6323684723438254853
-    second: ezgif.com-animated-gif-maker_0
+      213: 6266176060360064
+    second: happy_0
   - first:
-      213: 8009501262510246939
-    second: ezgif.com-animated-gif-maker_1
+      213: 3193106209548952640
+    second: happy_1
   - first:
-      213: -7446918812257551072
-    second: ezgif.com-animated-gif-maker_2
+      213: 9007878228973910016
+    second: happy_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 3
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ezgif.com-animated-gif-maker_0
+      name: happy_0
       rect:
         serializedVersion: 2
-        x: 631
-        y: 1632
-        width: 381
-        height: 262
+        x: 1346
+        y: 3481
+        width: 813
+        height: 559
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,20 +120,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf406e39f32cd38a0800000000000000
-      internalID: -6323684723438254853
+      spriteID: 0858d2ecd03461000800000000000000
+      internalID: 6266176060360064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif.com-animated-gif-maker_1
+      name: happy_1
       rect:
         serializedVersion: 2
-        x: 738
-        y: 1884
-        width: 65
-        height: 33
+        x: 1574
+        y: 4018
+        width: 140
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1c47fb46f6772f60800000000000000
-      internalID: 8009501262510246939
+      spriteID: 04462460e21305c20800000000000000
+      internalID: 3193106209548952640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif.com-animated-gif-maker_2
+      name: happy_2
       rect:
         serializedVersion: 2
-        x: 347
-        y: 17
-        width: 1389
-        height: 1798
+        x: 740
+        y: 36
+        width: 2965
+        height: 3837
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,8 +162,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02df634bbca37a890800000000000000
-      internalID: -7446918812257551072
+      spriteID: 008f6f10689620d70800000000000000
+      internalID: 9007878228973910016
       vertices: []
       indices: 
       edges: []
@@ -179,9 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ezgif.com-animated-gif-maker_0: -6323684723438254853
-      ezgif.com-animated-gif-maker_1: 8009501262510246939
-      ezgif.com-animated-gif-maker_2: -7446918812257551072
+      happy_0: 6266176060360064
+      happy_1: 3193106209548952640
+      happy_2: 9007878228973910016
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

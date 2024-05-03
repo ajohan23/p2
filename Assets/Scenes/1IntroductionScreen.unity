@@ -522,13 +522,13 @@ MonoBehaviour:
     name: Grandma
     sentences:
     - Oh hello dear.
-    - Can you help your old grandma for a bit?
-    - I think some of the produce in the fridge have gone bad.
-    - Can you check for me?
+    - Can you help old grandma for a bit?
+    - I think some of the food in the fridge have gone bad...
+    - Can you guys check for me?
     - Use your 4 senses to se if it is worth keeping.
-    - But be quick before it spreads!
-    - And everytime you do it correctly, I will give you some money.
-    - Go to the fridge whenever you are ready!
+    - But be quick, the time is running out!
+    - Everytime you make a correct decision, I will award you guys with some money.
+    - Head to the fridge whenever you are ready!
 --- !u!114 &72559480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,12 +1576,24 @@ PrefabInstance:
       value: owl
       objectReference: {fileID: 0}
     - target: {fileID: 7815232175487494388, guid: 73eec5457f493064db3af5b0559a941b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815232175487494388, guid: 73eec5457f493064db3af5b0559a941b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815232175487494388, guid: 73eec5457f493064db3af5b0559a941b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815232175487494388, guid: 73eec5457f493064db3af5b0559a941b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.58
+      value: 5.99
       objectReference: {fileID: 0}
     - target: {fileID: 7815232175487494388, guid: 73eec5457f493064db3af5b0559a941b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.14
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 7815232175487494388, guid: 73eec5457f493064db3af5b0559a941b, type: 3}
       propertyPath: m_LocalPosition.z
