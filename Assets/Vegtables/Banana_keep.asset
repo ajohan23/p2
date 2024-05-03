@@ -21,9 +21,9 @@ MonoBehaviour:
     visible: 0
     tasteable: 0
     feelable: 0
-    smellComment: Smells fine
-    seeComment: Looks fine
-    tasteComment: Tastes fine
+    smellComment: Smells good
+    seeComment: It looks fine
+    tasteComment: That's a banana alright
     feelComment: Feels softer
     action:
       name: 

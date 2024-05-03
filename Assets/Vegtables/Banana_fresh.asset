@@ -21,10 +21,10 @@ MonoBehaviour:
     visible: 0
     tasteable: 0
     feelable: 0
-    smellComment: Smells fine
-    seeComment: Looks fine
-    tasteComment: Tastes fine
-    feelComment: Feels fine
+    smellComment: Smells good
+    seeComment: Seems fine
+    tasteComment: That's a banana alright
+    feelComment: Firm
     action:
       name: 
       actionSprite: {fileID: 21300000, guid: 32d65d48f36e54f4fb4e093d802d40e7, type: 3}
