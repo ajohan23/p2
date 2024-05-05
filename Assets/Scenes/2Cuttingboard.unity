@@ -1723,7 +1723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a7a07f8309ffb45b002f4ca746550a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 30
+  TimeLeft: 60
   TimeOn: 0
   endSceneId: 3
   TimerTxt: {fileID: 1277502826}

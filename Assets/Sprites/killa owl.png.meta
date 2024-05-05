@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      killa owl_0: -2551358605440115810
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
