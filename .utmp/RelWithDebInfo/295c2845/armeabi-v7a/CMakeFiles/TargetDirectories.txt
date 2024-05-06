@@ -1,0 +1,5 @@
+C:/Users/alexs/OneDrive/Skrivebord/Uni/2. Semester/P2/GitHubP2/p2/.utmp/RelWithDebInfo/295c2845/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/alexs/OneDrive/Skrivebord/Uni/2. Semester/P2/GitHubP2/p2/.utmp/RelWithDebInfo/295c2845/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/Users/alexs/OneDrive/Skrivebord/Uni/2. Semester/P2/GitHubP2/p2/.utmp/RelWithDebInfo/295c2845/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/alexs/OneDrive/Skrivebord/Uni/2. Semester/P2/GitHubP2/p2/.utmp/RelWithDebInfo/295c2845/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/alexs/OneDrive/Skrivebord/Uni/2. Semester/P2/GitHubP2/p2/.utmp/RelWithDebInfo/295c2845/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

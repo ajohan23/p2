@@ -18,6 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/3Lost.unity
     guid: e8dd0cde221a2cf4095103f1b1330ed8
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 1922f96215dd31c489412022832de797, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: e65f618cdc6e7f5469ca02474cdc54e4, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: fd4ac474660b13e4c87b20fc217cd703, type: 2}
   m_UseUCBPForAssetBundles: 0
