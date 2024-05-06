@@ -30,5 +30,5 @@ MonoBehaviour:
       actionSprite: {fileID: 21300000, guid: 211c976a04c85dd43ab02502ac60e625, type: 3}
       actionComment: You carrot me fooled!!
   correctAction: Cut
-  keepComment: You saw right through that!
+  keepComment: Got bad eyesight?
   trashComment: That carrot be!

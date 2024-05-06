@@ -30,5 +30,5 @@ MonoBehaviour:
       actionSprite: {fileID: 21300000, guid: ffeaad645bf66504891c29c88e099f5e, type: 3}
       actionComment: Pear-fect!
   correctAction: Cut
-  keepComment: We're like a pear!
+  keepComment: That will spread..
   trashComment: That was unnecessary

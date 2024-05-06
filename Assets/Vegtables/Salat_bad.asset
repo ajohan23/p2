@@ -30,5 +30,5 @@ MonoBehaviour:
       actionSprite: {fileID: 21300000, guid: cd6defd2886ae104bbc82a2cc19887e4, type: 3}
       actionComment: Nicely done, the bad layers can be peeled off
   correctAction: Cut
-  keepComment: Peel bad layers off and it's fine!
+  keepComment: That will spead..
   trashComment: Noo.. peel the layers off!

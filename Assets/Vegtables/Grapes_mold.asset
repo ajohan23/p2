@@ -31,5 +31,5 @@ MonoBehaviour:
       actionComment: Bad grapes can be picked off but be careful the rest will spoil
         fast!
   correctAction: Cut
-  keepComment: They look new and purple-lucious!
+  keepComment: No! They will turn sour!
   trashComment: Poor thing it wines!

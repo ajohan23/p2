@@ -30,5 +30,5 @@ MonoBehaviour:
       actionSprite: {fileID: 21300000, guid: 40dc43603a5e4f24c8f096610d8649d6, type: 3}
       actionComment: Browns spots on the melons armor can just be cut right off.
   correctAction: Cut
-  keepComment: You're one in a melon!
+  keepComment: That will spead..
   trashComment: That's a lot to waste..

@@ -30,6 +30,5 @@ MonoBehaviour:
       actionSprite: {fileID: 21300000, guid: 9fba89e5dc784be4e838ea2bcb30238f, type: 3}
       actionComment: Good job! You saved the apple!
   correctAction: Cut
-  keepComment: Apples can be used even with Mold on them, just cut the mold right
-    off!
+  keepComment: That will turn bad..
   trashComment: Apples that are soggy are no good to eat.

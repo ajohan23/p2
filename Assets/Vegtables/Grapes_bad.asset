@@ -30,5 +30,5 @@ MonoBehaviour:
       actionSprite: {fileID: 21300000, guid: 7025cf17bfb747e4f8461e5cb0ff0d5a, type: 3}
       actionComment: Picking them right off!
   correctAction: Cut
-  keepComment: Look at all em' grapes!
+  keepComment: That will spead..
   trashComment: Poor thing it wines!

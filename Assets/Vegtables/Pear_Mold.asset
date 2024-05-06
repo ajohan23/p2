@@ -31,5 +31,5 @@ MonoBehaviour:
       actionComment: Pears are like apples and can be used even with Mold on them,
         just cut the mold right off!
   correctAction: Cut
-  keepComment: Pear-fect
+  keepComment: No! It's all moldy!
   trashComment: That's just lazy..
