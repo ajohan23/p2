@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -11,7 +12,7 @@ public class TimaerScript : MonoBehaviour
     public bool TimeOn = false;
     public int endSceneId = 4; //The id of the scene to load when the time is up
 
-    public TextMeshProUGUI TimerTxt;
+    public TextMeshProUGUI TimerTxt; // the text for the timer
     public GameObject timesUpText;
 
     //refrences
@@ -24,12 +25,12 @@ public class TimaerScript : MonoBehaviour
 
     void Update()
     {
-        DetermineColor();
-        if(TimeOn)
+        DetermineColor(); 
+        if(TimeOn) 
         {
             if(TimeLeft > 0)
             {
-                TimeLeft -= Time.deltaTime;
+                TimeLeft -= Time.deltaTime; // the time 
             }
             else
             {
@@ -37,16 +38,19 @@ public class TimaerScript : MonoBehaviour
                 TimeLeft = 0;
                 TimeOn = false;
             }
-            updateTimer(TimeLeft);
+            updateTimer(TimeLeft); // the visuals
         }
     }
     void updateTimer(float currentTime)
     {
-        float minutes = Mathf.FloorToInt(currentTime / 60);
-        float seconds = Mathf.FloorToInt(currentTime % 60);
+        // floortoInt makes it an Int
+        float minutes = Mathf.FloorToInt(currentTime / 60); // the time in mins divided by 60 
+        float seconds = Mathf.FloorToInt(currentTime % 60); // the seconds 
 
         TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds); // The Format is how it should look like.
 
+        // could also be written as so:  TimerTxt.text = $"{minutes} : {seconds}";
+        
         if (TimeLeft <= 0)
         {
             TimesUp();
@@ -68,7 +72,7 @@ public class TimaerScript : MonoBehaviour
         {
             TimerTxt.color = Color.red;
         }
-        else if (TimeOn == false) 
+        else if (TimeOn == false) // the time is "paused"
         {
             TimerTxt.color = Color.yellow;
         }
@@ -94,7 +98,7 @@ public class TimaerScript : MonoBehaviour
             {
                 Debug.Log("VegtableController not set");
             }
-            timesUpText.SetActive(true);
-            Invoke("ChangeScene", 5f); // changes theme.
+            timesUpText.SetActive(true); // shows to the user, that the time is up.
+            Invoke("ChangeScene", 5f); // changes sceme.
     }
 }
