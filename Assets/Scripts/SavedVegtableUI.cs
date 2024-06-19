@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
+// lævn fra fortiden..
+
 public class SavedVegtableUI : MonoBehaviour
 {
     public TMP_Text textTotal;

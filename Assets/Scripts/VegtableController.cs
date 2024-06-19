@@ -44,14 +44,14 @@ public class VegtableController : MonoBehaviour
     //Unity callbacks
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        cross.SetActive(false);
+        spriteRenderer = GetComponent<SpriteRenderer>(); // finds the white circle sprite.
+        cross.SetActive(false); // the cross is not seen
     }
 
     private void Start()
     {
         ChooseRandomVegtable();
-        logManager = FindAnyObjectByType<LoggingManager>();
+        logManager = FindAnyObjectByType<LoggingManager>(); // not used :)
     }
 
     //Methods
@@ -206,16 +206,16 @@ public class VegtableController : MonoBehaviour
 
     void ChooseRandomVegtable()
     {
-        tweenImage();
-        totalFruit++;
+        tweenImage(); // animation
+        totalFruit++; // used in logging, not used :)
         timer.UnPause();
-        stars.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        stars.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear); // stars animation stop
         HideComment();
-        vegtable = vegtables[Random.Range(0, vegtables.Length)];
-        spriteRenderer.sprite = vegtable.deafaultSprite;
+        vegtable = vegtables[Random.Range(0, vegtables.Length)]; // a new vegetable is choosen from our list
+        spriteRenderer.sprite = vegtable.deafaultSprite; // default sprite is loaded
     }
 
-    void ClearActionButtons()
+    void ClearActionButtons() // all action buttons is removed = ONLY CUT
     {
         foreach(ActionButton actionButton in existingActions)
         {
@@ -229,25 +229,25 @@ public class VegtableController : MonoBehaviour
         dialogManager.EndDialogue();
     }
 
-    void pauseInput(float time)
+    void pauseInput(float time) // senses used or saving action, pause inputs (grey buttons) in given time.
     {
-        StopInput();
-        Invoke("enableInput", time);
+        StopInput(); // stops input, gray buttons
+        Invoke("enableInput", time); // enables input after delay.
     }
 
-    void enableInput()
+    void enableInput() // opens for inputs
     {
         EnableButtons(true);
         isOpenForInput = true;
     }
 
-    public void StopInput()
+    public void StopInput() // closes for inputs.
     {
         EnableButtons(false);
         isOpenForInput = false;
     }
 
-    public void tweenImage()
+    public void tweenImage() // Animation.
     {
         LeanTween.scale(gameObject, Vector3.one*2, tweenTime)
         .setEasePunch();
@@ -260,7 +260,7 @@ public class VegtableController : MonoBehaviour
         cross.SetActive(false); // then the image is false again
     }
 
-    public void LogData()
+    public void LogData() // NOT USED!!!!! :)
     {
         if (logManager != null)
         {
@@ -281,7 +281,7 @@ public class VegtableController : MonoBehaviour
         }
     }
 
-    void DisplayClueSprite()
+    void DisplayClueSprite() // called everytime a clue is found
     {
         if (vegtable.clues.Length > 0)
         {
@@ -289,7 +289,7 @@ public class VegtableController : MonoBehaviour
         }
     }
 
-    void EnableButtons(bool enable)
+    void EnableButtons(bool enable) 
     {
         //Enable all normal buttons
         foreach (Button button in buttons)
@@ -298,7 +298,7 @@ public class VegtableController : MonoBehaviour
         }
 
         //Enable all action buttons
-        foreach (ActionButton actionButton in existingActions)
+        foreach (ActionButton actionButton in existingActions) // all actions are added to existingActions (KNIFE)
         {
             Button _button = actionButton.GetComponent<Button>();
             if (_button != null )

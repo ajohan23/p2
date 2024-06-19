@@ -16,7 +16,7 @@ public class Vegtable : ScriptableObject
 }
 
 [System.Serializable]
-public class Clue
+public class Clue // used in the NOT AVATAR version. So something else is written here.
 {
     public Sprite foundSprite;
     public bool smellable = false;

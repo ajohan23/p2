@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public bool triggerOnStart = false;
+    public bool triggerOnStart = false; // in the start.
     public Dialogue dialogue;
 
     private void Start()
     {
-        if(triggerOnStart)
+        if(triggerOnStart) // starts dialogue
         {
-            TriggerDialogue();
+            TriggerDialogue(); 
         }
     }
 

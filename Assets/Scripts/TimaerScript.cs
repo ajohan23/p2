@@ -45,7 +45,7 @@ public class TimaerScript : MonoBehaviour
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds); // The Format is how it should look like.
 
         if (TimeLeft <= 0)
         {
@@ -62,7 +62,7 @@ public class TimaerScript : MonoBehaviour
         TimeOn = true;
     }
 
-    void DetermineColor()
+    void DetermineColor() // makes the colour change.
     {
         if (TimeLeft <= 0)
         {
@@ -78,7 +78,7 @@ public class TimaerScript : MonoBehaviour
         }
     }
 
-    void ChangeScene()
+    void ChangeScene() // changes scene
     {
         SceneManager.LoadScene(endSceneId);
     }
@@ -88,13 +88,13 @@ public class TimaerScript : MonoBehaviour
         if (VegtableController != null)
             {
                 VegtableController.StopInput();
-                VegtableController.LogData();
+                VegtableController.LogData(); // not used :)
             }
             else
             {
                 Debug.Log("VegtableController not set");
             }
             timesUpText.SetActive(true);
-            Invoke("ChangeScene", 5f);
+            Invoke("ChangeScene", 5f); // changes theme.
     }
 }
